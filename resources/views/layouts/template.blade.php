@@ -61,7 +61,7 @@
                 #Menu
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
-                <a href="/sewa/kamera/canon">PriceList</a>
+                <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
                 <a href="/sewa/kamera/nikon">ProsedurSewa</a>
                 <a href="/sewa/kamera/sony">Gallery</a>
                 <a href="/sewa/kamera/samsung">Note</a>
@@ -104,10 +104,6 @@
                 <a href="/sewa/aksesoris/memory">Memory</a>
               </div>
             </li>
-           
-          
-      
-
 
         </div>
       </div>
