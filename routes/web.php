@@ -52,6 +52,10 @@ Route::get('/sewa/aksesoris/battery', 'SewaAksesorisController@show_battery');
 Route::get('/sewa/aksesoris/memory', 'SewaAksesorisController@show_memory');
 
 
+//layout sub menu
+
+Route::get('/prosedurSewa', 'MenuController@prosedur');
+
 #login
 Route::get('/login', 'LoginController@index');
 Route::get('/daftar', 'DaftarController@index');

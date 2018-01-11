@@ -29,7 +29,7 @@
             <ul>
               <li>Kami mengetahui pasti kebutuhan konsumen</li>
               <li>Harga yang kami tawarkan sebanding dengan kualitas dan pelayanan kami</li>
-              <li>Konsumen dengan mudah menyewa tanpa harus datang ke toko</li>
+
             </ul>
           </p>
         </div>
