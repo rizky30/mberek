@@ -8,4 +8,6 @@ class Camera extends Model
 {
     //
        protected $fillable = ['brand','harga_sewa','foto'];
+
+
 }

@@ -58,6 +58,20 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                #Menu
+              </a>
+              <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
+                <a href="/sewa/kamera/canon">PriceList</a>
+                <a href="/sewa/kamera/nikon">ProsedurSewa</a>
+                <a href="/sewa/kamera/sony">Gallery</a>
+                <a href="/sewa/kamera/samsung">Note</a>
+                <a href="/sewa/kamera/gopro">Whistlist</a>
+                <a href="/sewa/kamera/gopro">Contact</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Kamera
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
@@ -94,19 +108,7 @@
           
       
 
-            @if(Auth::user())
-            <li class="nav-item">
-             <a class="nav-link" href="{{'/logout'}}">Logout |  {{ucwords(Auth::user()->name)}}</a>
-            </li>
 
-            @else
-
-              <li class="nav-item">
-              <a class="nav-link" href="login">Login</a>
-            </li>
-
-            @endif
-          </ul>
         </div>
       </div>
     </nav>
