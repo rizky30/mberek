@@ -10,6 +10,7 @@
         </div>
         <div class="pull-left info">
           <p>{{ Auth::user()->name }}</p>
+          <p style="color: #605ca8">Sumber Rejeki Corp.</p>
         </div>
       </div>
       <!-- search form -->
@@ -60,17 +61,29 @@
 
 
  <li class="treeview">
-          <a href="#">
-            <i class="glyphicon glyphicon-facetime-video"></i> <span>lensa</span>
-            <span class="pull-right-container">
+              <a href="#">
+                  <i class="glyphicon glyphicon-facetime-video"></i> <span>lensa</span>
+                  <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="insertLensa"><i class="fa fa-circle-o"></i> insert Lesa</a></li>
-            <li><a href="viewLensa"><i class="fa fa-circle-o"></i> Lihat Lensa</a></li>
-          </ul>
-        </li>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="insertLensa"><i class="fa fa-circle-o"></i> insert Lesa</a></li>
+                  <li><a href="viewLensa"><i class="fa fa-circle-o"></i> Lihat Lensa</a></li>
+              </ul>
+          </li>
+
+          <li class="treeview">
+              <a href="#">
+                  <i class="glyphicon glyphicon-comment"></i> <span>Masukkan</span>
+                  <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="viewMasukkan"><i class="fa fa-circle-o"></i> Lihat Masukkan</a></li>
+              </ul>
+          </li>
 
 
 {{--          <li class="treeview">

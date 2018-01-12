@@ -49,7 +49,8 @@
     </div>
     <!-- /.box --> --}}
 
-     <div class="row">
+      
+    <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
@@ -71,10 +72,11 @@
             <div class="box-body table-responsive no-padding">
               <table class="table table-hover">
                 <tr>
-                   
+                  
+                  <th>Id</th> 
                   <th>Brand</th>
                   <th>tipe</th>
-                    <th>fitur</th>
+                  <th>fitur</th>
                   <th>Harga Sewa</th>
                   <th>Foto</th>
                   <th>Lihat</th>
@@ -82,21 +84,23 @@
                   <th>Delete</th>
                
                 </tr>
-  @foreach($kameras as $kamera)
+                @foreach($kameras as $kamera)
                 <tr>
                
                 
-                 {{--  <td>{{$kameras->brand}} </td>
+                {{-- 
+                  <td>{{$kameras->brand}}</td>
                   <td>{{$kameras->harga_sewa}}</td>
                   <td>{{$kameras->foto}}</td>
- --}}       
+                --}}       
 
-                  <td>{{$kamera->id_kamera}}</td>
-                   <td>{{$kamera->tipe}}</td>
-                     <td>{{$kamera->fitur}}</td>
+                  <td>{{$kamera->id_kamera}}</td> 
+                  <td>{{$kamera->merk}}</td>
+                  <td>{{$kamera->tipe}}</td>
+                  <td>{{$kamera->fitur}}</td>
                   <td>{{$kamera->harga_sewa}}</td>
                 {{--   <td>{{$kamera->foto}}</td> --}}
-                <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="50px" height="50px"></td>
+                <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
                    <td><a href="lihatCamera/{{$kamera->id_kamera}}"><i class=" glyphicon glyphicon-eye-open"></i></a></td>
                   <td><a href="editCamera/{{$kamera->id_kamera}}"><i class="glyphicon glyphicon-edit"></i></a></td>
@@ -112,7 +116,7 @@
           </div>
           <!-- /.box -->
         </div>
-      </div>  
+    </div>  
 
   </section>
   <!-- /.content -->

@@ -18,7 +18,14 @@ Route::get('/home', 'HomeController@index');
 Route::get('/about', 'AboutController@index');
 Route::get('/services', 'ServicesController@index');
 Route::get('/gallery', 'GalleryController@index');
+
+
+//khusuzon contact
 Route::get('/contact', 'ContactController@index');
+Route::post('/storeContact', "ContactController@store");
+//
+Route::get('/admin/viewMasukkan', 'ContactController@viewMasukkan');
+
 
 
 // show kamera
@@ -83,7 +90,7 @@ Route::group( ['middleware' => 'auth' ], function()
 {
 #admin page
 
-Route::get('/alogin', 'AdminController@index');
+
 Route::get('/admin/home', 'AdminController@dashboard');
 
 

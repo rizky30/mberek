@@ -73,14 +73,7 @@
 
           <div class="form-group">
                 <label for="tipe">Tipe</label>
-                <select class="form-control select2" style="width: 100%;" name="tipe" id="tipe">
-                  <option  value="d3200">d3200</option>
-                  <option value="d5200">d5200</option>
-                  <option value="d7100">d7100</option>
-                  <option value="d600">d600</option>
-                  <option value="d800(e)">d800(e)</option>
-                  <option value="mirrorless">mirrorless</option>
-                </select>
+                <input type="text" class="form-control" id="tipe" name="tipe" placeholder="masukkan harga sewa" value="{{$kameras->tipe}}">
               </div>
 
 

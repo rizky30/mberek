@@ -43,13 +43,7 @@
 
           <div class="form-group">
                 <label for="tipe">Tipe</label>
-                <select class="form-control select2" style="width: 100%;" name="tipe" id="tipe">
-                  <option selected="selected" value="d3200">d3200</option>
-                  <option value="d5200">d5200</option>
-                  <option value="d7100">d7100</option>
-                  <option value="d600">d600</option>
-                  <option value="d800(e)">d800(e)</option>
-                  <option value="mirrorless">mirrorless</option>
+                <input type="text" class="form-control" rows="6" id="tipe" name="tipe" placeholder="Masukkan Tipe" ></input>
                 </select>
               </div>
 

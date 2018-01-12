@@ -62,10 +62,11 @@
             <div class="box-body table-responsive no-padding">
               <table class="table table-hover">
                 <tr>
-                   
+                  
+                  <th>Id</th> 
                   <th>Jenis</th>
-                   <th>Tipe</th>
-                   <th>Fitur</th>
+                  <th>Tipe</th>
+                  <th>Fitur</th>
                   <th>Harga Sewa</th>
                   <th>Foto</th>
                   <th>Lihat</th>
@@ -81,13 +82,14 @@
                   <td>{{$kameras->harga_sewa}}</td>
                   <td>{{$kameras->foto}}</td>
  --}}       
-            
+                  
+                  <td>{{$aks->id}}</td>
                   <td>{{$aks->jenis}}</td>
                   <td>{{$aks->tipe}}</td>
                   <td>{{$aks->fitur}}</td>
                   <td>{{$aks->harga_sewa}}</td>
                 {{--   <td>{{$kamera->foto}}</td> --}}
-                <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="50px" height="50px"></td>
+                <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="140px" height="80px"></td>
 
                    <td><a href="lihatAksesoris/{{$aks->id}}"><i class=" glyphicon glyphicon-eye-open"></i></a></td>
                   <td><a href="editAksesoris/{{$aks->id}}"><i class="glyphicon glyphicon-edit"></i></a></td>

@@ -72,9 +72,10 @@
               <table class="table table-hover">
                 <tr>
                    
+                  <th>Id</th>
                   <th>Brand</th>
-                   <th>Tipe</th>
-                   <th>Fitur</th>
+                  <th>Tipe</th>
+                  <th>Fitur</th>
                   <th>Harga Sewa</th>
                   <th>Foto</th>
                   <th>Lihat</th>
@@ -91,12 +92,13 @@
                   <td>{{$kameras->foto}}</td>
  --}}       
             
+                  <td>{{$lensa->id_lensa}}</td>
                   <td>{{$lensa->merk}}</td>
                   <td>{{$lensa->tipe}}</td>
                   <td>{{$lensa->fitur}}</td>
                   <td>{{$lensa->harga_sewa}}</td>
                 {{--   <td>{{$kamera->foto}}</td> --}}
-                <td><img src="{{URL::to('/image/'.$lensa->gambar)}}" alt="" width="50px" height="50px"></td>
+                <td><img src="{{URL::to('/image/'.$lensa->gambar)}}" alt="" width="140px" height="80px"></td>
 
                    <td><a href="lihatLensa/{{$lensa->id_lensa}}"><i class=" glyphicon glyphicon-eye-open"></i></a></td>
                   <td><a href="editLensa/{{$lensa->id_lensa}}"><i class="glyphicon glyphicon-edit"></i></a></td>

@@ -3,14 +3,14 @@
   @section('title', 'Sewa')
 
   @section('content')
-    <div class="container">
+    <div class="container" style="margin-top: 60px;">
 
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="/home">Home</a>
         </li>
         <li class="breadcrumb-item active">Sewa</li>
-      </ol>
+      </ol> -->
 
       <!-- Page Heading/Breadcrumbs -->
       <div class="row text-center">
@@ -52,8 +52,7 @@
                   <div class="product-bottom text-center">
                     <h3>{{ $kamera->tipe }}</h3>
                     <p>{{ $kamera->merk }}</p>
-                    <h4><span class=" item_price">Rp {{ $kamera->harga_sewa }}</span></h4>
-                    <a class="btn btn-primary btn-md" href="/detil/kamera/{{$kamera->tipe}}" role="button">Lihat Rincian  <i class="fa fa-search"></i></a>
+                    <h4><span class=" item_price">{{ $kamera->harga_sewa }}</span></h4>
                   </div>
 
 
