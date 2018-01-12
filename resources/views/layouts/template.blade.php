@@ -65,7 +65,7 @@
                 <a href="/prosedurSewa">ProsedurSewa</a>
                 <a href="/sewa/kamera/sony">Gallery</a>
                 <a href="/sewa/kamera/samsung">Note</a>
-                <a href="/sewa/kamera/gopro">Whistlist</a>
+                <a href="/wishlist ">wishlist</a>
                 <a href="/contact">Contact</a>
               </div>
             </li>

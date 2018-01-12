@@ -47,6 +47,8 @@
           </p>
         </div>
       </div>
+
+
       <!-- /.row -->
 
       <!-- Contact Form -->
@@ -88,5 +90,7 @@
 
 
     </form>
+
+
 
   @endsection  

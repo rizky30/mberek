@@ -26,7 +26,9 @@ Route::post('/storeContact', "ContactController@store");
 //
 Route::get('/admin/viewMasukkan', 'ContactController@viewMasukkan');
 
-
+//khusuzon wishlist
+Route::get('/wishlist', 'wishlistController@index');
+Route::post('/storeWishlist', "wishlistController@store");
 
 // show kamera
 Route::get('/sewa/kamera', 'SewaKameraController@index');
