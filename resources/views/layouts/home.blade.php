@@ -212,7 +212,7 @@
             </div>
             <div class="col-md-4">
               <h4 class="text-uppercase mb-4">Waktu Pelayanan</h4>
-              <p class="lead mb-0">Senin - Jum'at, 6:00 sampai 17:00
+              <p class="lead mb-0">Senin - Jum'at, 6:00 sampai 21:00
               </p>
             </div>
           </div>

@@ -7,14 +7,7 @@
   @endsection
 
   @section('content')
-    <div class="container">
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="/home">Home</a>
-        </li>
-        <li class="breadcrumb-item active">About</li>
-      </ol>
+    <div class="container" style="margin-top: 60px;">
 
       <!-- Intro Content -->
       <div class="row">

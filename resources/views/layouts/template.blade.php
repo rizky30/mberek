@@ -62,10 +62,10 @@
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
                 <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
-                <a href="/prosedurSewa">ProsedurSewa</a>
-                <a href="/sewa/kamera/sony">Gallery</a>
+                <a href="/prosedurSewa">Prosedur Sewa</a>
+                <a href="/gallery">Gallery</a>
                 <a href="/sewa/kamera/samsung">Note</a>
-                <a href="/wishlist ">wishlist</a>
+                <a href="/sewa/kamera/gopro">Whistlist</a>
                 <a href="/contact">Contact</a>
               </div>
             </li>

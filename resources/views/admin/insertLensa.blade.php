@@ -25,10 +25,9 @@
        <form action="storeLensa" method="post" enctype="multipart/form-data">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="merk">Brand Lensa</label>
 
                 <div class="form-group">
-                <label for="merk">Brand</label>
+                <label for="merk">Merk</label>
                 <select class="form-control select2" style="width: 100%;" name="merk" id="merk">
                   <option selected="selected" value="canon">canon</option>
                   <option value="nikon">nikon</option>
