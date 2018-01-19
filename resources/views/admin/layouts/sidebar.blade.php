@@ -21,14 +21,20 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
-            <li class=""><a href="/admin/home"><i class="fa fa-home"></i> Home</a></li>
-            @can('posts.category',Auth::user())
-            <li class=""><a href=""><i class="fa fa-circle-o"></i> Camera</a></li>
-            @endcan
-            @can('posts.tag',Auth::user())
-            <li class=""><a href=""><i class="fa fa-circle-o"></i> Accecories</a></li>
-            @endcan
+        {{--<li class="active treeview">--}}
+            {{--<li class=""><a href="/admin/home"><i class="fa fa-home"></i> Home</a></li>--}}
+            {{--@can('posts.category',Auth::user())--}}
+            {{--<li class=""><a href=""><i class="fa fa-circle-o"></i> Camera</a></li>--}}
+            {{--@endcan--}}
+            {{--@can('posts.tag',Auth::user())--}}
+            {{--<li class=""><a href=""><i class="fa fa-circle-o"></i> Accecories</a></li>--}}
+            {{--@endcan--}}
+
+          <li class="treeview">
+              <a href="/admin/home">
+                  <i class="glyphicon glyphicon-home"></i> <span>Home</span>
+              </a>
+          </li>
 
 
         <li class="treeview">

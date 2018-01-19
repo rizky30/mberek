@@ -53,13 +53,29 @@ class contactController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $contact = new contact;
-        $contact->name=Input::get("name");
-        $contact->email=Input::get("email");
-        $contact->message=Input::get("message");
-        $contact->save();
-        return redirect('contact');
+        // echo "test here";
+        $data=Input::except(array('_token'));
+        // var_dump($data); --> mengetes
+
+        $rule=array(
+
+            'name'=>'required',
+            'email'=>'required|email',
+            'message'=>'required',
+
+
+        );
+
+
+
+        $validator=validator::make($data,$rule);
+
+        if($validator->fails()){
+            return Redirect::to('contact')->withErrors($validator);
+        }else{
+            contact::formstore(Input::except('_token'));
+            return Redirect::to('contact')->with('success','Masukkan anda telah kami terima, terimakasih');
+        }
 
     }
 

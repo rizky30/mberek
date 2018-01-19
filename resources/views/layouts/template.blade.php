@@ -65,13 +65,13 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                #Menu
+                Help
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
                 <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
                 <a href="/prosedurSewa">Prosedur Sewa</a>
-                <a href="/wishlist">Whistlist</a>
-                <a href="/contact">Contact</a>
+                <a href="/wishlist">Wisht Item</a>
+                <a href="/contact">Masukkan</a>
               </div>
             </li>
 
@@ -104,7 +104,7 @@
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
                 <a href="/sewa/aksesoris/tripod">Tripod</a>
                 <a href="/sewa/aksesoris/lighting">Lighting</a>
-                <a href="/sewa/aksesoris/microphone">Michrophone</a>
+                <a href="/sewa/aksesoris/microphone">Microphone</a>
                 <a href="/sewa/aksesoris/battery">Extra Battery</a>
                 <a href="/sewa/aksesoris/memory">Memory</a>
               </div>

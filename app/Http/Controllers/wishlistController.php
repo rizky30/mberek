@@ -51,15 +51,31 @@ class wishlistController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $wishlist = new wishlist;
-        $wishlist->nama=Input::get("nama");
-        $wishlist->email=Input::get("email");
-        $wishlist->telepon=Input::get("telepon");
-        $wishlist->request=Input::get("request");
-        $wishlist->deskripsi=Input::get("deskripsi");
-        $wishlist->save();
-        return redirect('wishlist');
+        // echo "test here";
+        $data=Input::except(array('_token'));
+        // var_dump($data); --> mengetes
+
+        $rule=array(
+
+            'nama'=>'required',
+            'email'=>'required|email',
+            'telepon'=>'required',
+            'request'=>'required',
+            'deskripsi'=>'required'
+            
+
+        );
+
+       
+
+        $validator=validator::make($data,$rule);
+
+        if($validator->fails()){
+            return Redirect::to('wishlist')->withErrors($validator);
+        }else{
+            wishlist::formstore(Input::except('_token'));
+            return Redirect::to('wishlist')->with('success','Wish anda telah kami tampung, terimakasih');
+        }
         
 
     }

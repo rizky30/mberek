@@ -12,27 +12,36 @@
         <br>
           <form role="form" action="storeContact"  method="post"  enctype="multipart/form-data" style="padding-left: 5rem; padding-right: 5rem;">
             <div class="panel-header text-center">
-              <h2>Get in touch with us</h2>
+              <h2>Stay in touch with us</h2>
             </div>
             <div class="panel-prosedur">
+              <div class="form-group">
+                @if(Session::has('success'))
+                  <div class="row text-center">
+                    <div class="col-md-12">
+                      <div class="alert alert-success">{{Session::get('success')}}</div>
+                    </div>
+                  </div>
+                @endif
+              </div>
               <input type="hidden" name="_token" value="{{csrf_token()}}">
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Nama Lengkap :</h4>
-                  <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                  <input type="text" class="form-control" id="name" name="name" required placeholder="Masukkan Nama">
                   <p class="help-block"></p>
                 </div>
               </div>
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Alamat Email :</h4>
-                  <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="Masukkan Email">
                 </div>
               </div>
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Masukan :</h4>
-                  <textarea rows="10" cols="100" class="form-control" id="message" name="message" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" required></textarea>
+                  <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Masukkan Pendapat" maxlength="500" style="resize:none" required></textarea>
                 </div>
               </div>
 
