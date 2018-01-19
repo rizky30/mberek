@@ -16,8 +16,15 @@
     <!-- Custom styles for this template -->
     <link href="{!! asset('assets/css/modern-business.css') !!}" rel="stylesheet">
 
+    <!-- Sweet Alert -->
+    <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
     <!-- Font Awesome -->
     <link href="{!! asset('assets/font-awesome/css/font-awesome.css') !!}" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="{!! asset('assets/images/icon/icon.png') !!}">
 
 
   </head>
@@ -63,9 +70,7 @@
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
                 <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
                 <a href="/prosedurSewa">Prosedur Sewa</a>
-                <a href="/gallery">Gallery</a>
-                <a href="/sewa/kamera/samsung">Note</a>
-                <a href="/sewa/kamera/gopro">Whistlist</a>
+                <a href="/wishlist">Whistlist</a>
                 <a href="/contact">Contact</a>
               </div>
             </li>
@@ -104,7 +109,7 @@
                 <a href="/sewa/aksesoris/memory">Memory</a>
               </div>
             </li>
-
+          </ul>
         </div>
       </div>
     </nav>
@@ -164,6 +169,10 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{!! asset('assets/vendor/jquery/jquery.min.js') !!}"></script>
     <script src="{!! asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') !!}"></script>
+
+    <!-- <script src="bower_components/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    Include a polyfill for ES6 Promises (optional) for IE11 and Android browser
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> -->
 
   </body>
 

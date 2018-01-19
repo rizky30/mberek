@@ -28,62 +28,6 @@
         <p>Sumber Rejeki Camera Rent adalah penyedia layanan sewa kamera yang berada di Malang. Kami melayani segala kebutuhan anda terkait kamera dan alat lainnya yangg berhubungan dengan fotografi. Selain lengkap, kami juga menyediakan peralatan kamera yang uptodate. </p>
       </div>
 
-      <!-- Product -->
-      <!-- <div class="product"> 
-        <div class="container">
-          <div class="product-top">
-            <div class="product-one">
-
-              @foreach($item_kamera as $kamera)
-              <div class="col-md-3 product-left">
-                <div class="product-main simpleCart_shelfItem">
-                  <a class="mask" href="/detil/kamera/{{$kamera->tipe}}"><img class="img-responsive zoom-img" src="{!! asset('assets/images/rincian/eos 5d.jpg') !!}" alt="" /></a>
-                  <div class="product-bottom text-center">
-                    <h4>{{ $kamera->tipe }}</h4>
-                    <p>{{ $kamera->merk }}</p>
-                    <h4><span class=" item_price">Rp {{ $kamera->harga_sewa }}</span></h4>
-                    <a class="btn btn-primary btn-md" href="/detil/kamera/{{$kamera->tipe}}" role="button">Lihat Rincian  <i class="fa fa-search"></i></a>
-                  </div>
-                  <div class="srch">
-                    <span>
-                      <strong>HOT ITEM</strong>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              @endforeach
-
-              @foreach($item_lensa as $lensa)
-              <div class="col-md-3 product-left">
-                <div class="product-main simpleCart_shelfItem">
-                  <a class="mask" href="/detil/lensa/{{$lensa->tipe}}"><img class="img-responsive zoom-img" src="{!! asset('assets/images/rincian/eos 5d.jpg') !!}" alt="" /></a>
-                  <div class="product-bottom text-center">
-                    <h3>{{ $lensa->tipe }}</h3>
-                    <p>{{ $lensa->merk }}</p>
-                    <h4><span class=" item_price">Rp {{ $lensa->harga_sewa }}</span></h4>
-                    <a class="btn btn-primary btn-md" href="/detil/lensa/{{$lensa->tipe}}" role="button">Lihat Rincian  <i class="fa fa-search"></i></a>
-                  </div>
-                  <div class="srch">
-                    <span>
-                      <strong>HOT ITEM</strong>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              @endforeach
-
-              <div class="clearfix"></div>
-
-            </div>   
-          </div>
-          <div class="row" style="padding-top: 30px;">
-            <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-              <a class="btn btn-block btn-primary btn-lg" href="/sewa/kamera" role="button">Tampilkan Lebih Banyak  <i class="fa fa-search"></i></a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="container" style="margin-top: 3rem">
         <div class="about-top grid-1">
           <div class="col-md-4 about-left">
@@ -92,7 +36,7 @@
                 <img class="img-responsive" src="{!! asset('assets/images/rincian/kamera2.jpg') !!}" alt="">
                 <figcaption>
                   <h2>Kamera</h2>
-                  <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                  <p>Cek ketersediaan kamera</p>
                 </figcaption>
               </figure>
             </a>
@@ -103,7 +47,7 @@
                 <img class="img-responsive" src="{!! asset('assets/images/rincian/lensa2.jpg') !!}" alt="">
                 <figcaption>
                   <h4>Lensa</h4>
-                  <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                  <p>Cek ketersediaan lensa</p>
                 </figcaption>
               </figure>
             </a>
@@ -114,7 +58,7 @@
                 <img class="img-responsive" src="{!! asset('assets/images/rincian/aksesoris2.jpg') !!}" alt="">
                 <figcaption>
                   <h4>Aksesoris</h4>
-                  <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                  <p>Cek ketersediaan aksesoris</p>
                 </figcaption>
               </figure>
             </a>  
@@ -187,10 +131,10 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-9 mx-auto text-white">
-              <h2 class="mb-4">Tertarik dengan Kami? Daftar sekarang!</h2>
+              <h2 class="mb-4">Tertarik dengan Kami? Sewa sekarang!</h2>
             </div>
             <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-              <a class="btn btn-block btn-lg btn-primary" href="daftar">Daftar</a>
+              <a class="btn btn-block btn-lg btn-primary" href="/prosedurSewa">Sewa</a>
             </div>
           </div>
         </div>

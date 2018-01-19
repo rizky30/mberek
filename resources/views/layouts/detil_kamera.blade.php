@@ -30,13 +30,13 @@
           @endif
           <h1 class="my-3" style="margin-bottom: 1rem; color: #3E2723">{{$kameras->tipe}}</h1>
 
-          <h1 class="my-3" style="margin-bottom: 1rem; color: #3E2723">Rp {{$kameras->harga_sewa}}</h1>
+          <h1 class="my-3" style="margin-bottom: 1rem; color: #3E2723">{{$kameras->harga_sewa}}</h1>
 
           <h4 class="my-3">Deskripsi Produk</h4>
           <p>{{ $kameras->deskripsi }}</p>
           <h4 class="my-3">Fitur</h4>
           <p>{{ $kameras->fitur }}</p>
-
+          <br>
         </div>
 
       </div>

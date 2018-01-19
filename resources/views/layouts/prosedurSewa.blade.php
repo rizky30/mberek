@@ -1,6 +1,6 @@
 @extends('layouts/template')
 
-@section('title', 'About')
+@section('title', 'Prosedur')
 
 @section('header')
 

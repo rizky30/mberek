@@ -2,18 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\contact;
 use Illuminate\Http\Request;
 
-use Input; # untuk inputan
-
-use Validator; #untuk validator
-
-use Redirect; #untuk redirect (saat error)
-
-use DB;
-
-class contactController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,9 +14,13 @@ class contactController extends Controller
     public function index()
     {
         //
-        return view('layouts/contact');
     }
 
+    public function prosedur()
+    {
+        //
+        return view('/layouts/prosedurSewa');
+    }
 
 
     /**
@@ -38,13 +33,6 @@ class contactController extends Controller
         //
     }
 
-    public function viewMasukkan()
-    {
-        //
-        $masukkan = contact::all();
-        return view('/admin/viewMasukkan',compact('masukkan'));
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -54,13 +42,6 @@ class contactController extends Controller
     public function store(Request $request)
     {
         //
-        $contact = new contact;
-        $contact->name=Input::get("name");
-        $contact->email=Input::get("email");
-        $contact->message=Input::get("message");
-        $contact->save();
-        return redirect('contact');
-
     }
 
     /**
@@ -69,10 +50,9 @@ class contactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id_masukkan)
+    public function show($id)
     {
-        $masukkan = DB::table("contacts")->where('id_masukkan',$id_masukkan)->first();
-        return view('admin/detilMasukkan',compact('masukkan'));
+        //
     }
 
     /**
@@ -104,10 +84,8 @@ class contactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_masukkan)
+    public function destroy($id)
     {
-        $masukkan = DB::table("contacts")->where('id_masukkan',$id_masukkan);
-        $masukkan->delete();
-        return redirect('/admin/viewMasukkan');
+        //
     }
 }

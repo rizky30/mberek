@@ -7,80 +7,49 @@
   @endsection
 
   @section('content')
-    <br>
+  <div class="py-5" id="menu" style="background: url({!! asset('assets/images/bg/bg_body.jpg') !!}) no-repeat center center; background-attachment: fixed;">
     <div class="container">
-
-      <br>
-
-      <!-- Content Row -->
-      <div class="row">
-        <!-- Map Column -->
-        <div class="col-lg-6">
-          <img class="img-fluid rounded mb-4" src="{!! asset('assets/images/logo/logo3.svg') !!}" alt="">
-        </div>
-
-        <!-- Contact Details Column --> 
-        <div class="col-lg-6" style="padding: 4rem;">
-          <h3>Detil Kontak</h3>
-          <p>
-            Jalan Danau Ranau
-            <br>Sawojajar, Malang
-            <br>
-          </p>
-          <p>
-            <abbr title="Phone"></abbr><i class="fa fa-phone"></i> : (+62) 821-1234-5678
-          </p>
-          <p>
-            <abbr title="Email"></abbr><i class="fa fa-envelope"></i> :
-            <a href="mailto:sumber_rejeki.cr@gmail.com"> sumber_rejeki.cr@gmail.com
-            </a>
-          </p>
-          <p>
-            <abbr title="Hours"></abbr><i class="fa fa-clock-o"></i> : Senin - Jum'at, 6:00 sampai 21:00
-          </p>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <!-- Contact Form -->
-      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-      <div class="row">
-        <div class="col-lg-8 mb-4">
-          <h3>Send us a Message</h3>
-          <form name="sentMessage" id="contactForm" novalidate>
-            <div class="control-group form-group">
-              <div class="controls">
-                <label>Full Name:</label>
-                <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                <p class="help-block"></p>
-              </div>
+        <br>
+          <form role="form" action="storeContact"  method="post"  enctype="multipart/form-data" style="padding-left: 5rem; padding-right: 5rem;">
+            <div class="panel-header text-center">
+              <h2>Get in touch with us</h2>
             </div>
-            <div class="control-group form-group">
-              <div class="controls">
-                <label>Phone Number:</label>
-                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+            <div class="panel-prosedur">
+              <input type="hidden" name="_token" value="{{csrf_token()}}">
+              <div class="control-group form-group">
+                <div class="controls">
+                  <h4>Nama Lengkap :</h4>
+                  <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                  <p class="help-block"></p>
+                </div>
               </div>
-            </div>
-            <div class="control-group form-group">
-              <div class="controls">
-                <label>Email Address:</label>
-                <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+              <div class="control-group form-group">
+                <div class="controls">
+                  <h4>Alamat Email :</h4>
+                  <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                </div>
               </div>
-            </div>
-            <div class="control-group form-group">
-              <div class="controls">
-                <label>Message:</label>
-                <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+              <div class="control-group form-group">
+                <div class="controls">
+                  <h4>Masukan :</h4>
+                  <textarea rows="10" cols="100" class="form-control" id="message" name="message" data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" required></textarea>
+                </div>
               </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton" style="width: 100px">Kirim</button>
             </div>
-            <div id="success"></div>
-            <!-- For success/fail messages -->
-            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
           </form>
-        </div>
 
-      </div>
-      <!-- /.row -->
+        <!-- Sweet Alert -->
+        <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
+        <script>
+          // Sweet Alert
+        </script>
 
     </div>
+  </div>
+
+</div>
   @endsection  

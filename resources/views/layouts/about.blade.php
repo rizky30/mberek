@@ -35,10 +35,10 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-9 mx-auto text-white">
-              <h2 class="mb-4">Tertarik dengan Kami? Daftar sekarang!</h2>
+              <h2 class="mb-4">Tertarik dengan Kami? Sewa sekarang!</h2>
             </div>
             <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-              <a class="btn btn-block btn-lg btn-primary" href="#">Daftar</a>
+              <a class="btn btn-block btn-lg btn-primary" href="/prosedurSewa">Sewa</a>
             </div>
           </div>
         </div>

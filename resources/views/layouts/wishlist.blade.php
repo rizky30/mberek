@@ -1,54 +1,60 @@
 @extends('layouts/template')
 
-@section('title', 'Home')
+@section('title', 'Wishlist')
 
 @section('header')
 
 @endsection
 
 @section('content')
-    <div>
-
-        <header class="masthead" style="height: 400px; margin-top: 30px; background: url({!! asset('assets/images/bg/bg_header.jpg') !!}) no-repeat center center; background-attachment: fixed;">
-            <div class="overlay" style="padding-top: 100px">
-                <div class="container" style="text-align: center;">
-
-                    <h1 class="display-1 text-white">Camera</h1>
-                    <h2 class="display-7 text-white">Wish List</h2>
-                </div>
+<div class="py-5" id="menu" style="background: url({!! asset('assets/images/bg/bg_body.jpg') !!}) no-repeat center center; background-attachment: fixed;">
+    <div class="container">
+        <br>
+        <form role="form" action="storeWishlist"  method="post"  enctype="multipart/form-data" style="padding-left: 5rem; padding-right: 5rem;">
+            <div class="panel-header text-center">
+                <h2>Form Wishlist</h2>
             </div>
-        </header>
-        <br>
-        <br>
-        <div class="container-fluid">
-        <form role="form" action="storeWishlist"  method="post"  enctype="multipart/form-data">
-            <div class="box-body">
+            <div class="panel-prosedur">
                 <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama">
+                    <h4 for="nama">Nama :</h4>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama" required>
                 </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" Enter email">
+                    <h4 for="email">Alamat Email :</h4>
+                    <input type="email" class="form-control" id="email" name="email" Enter email" required>
                 </div>
                 <div class="form-group">
-                    <label for="telepon">Telepon</label>
-                    <input type="tel" class="form-control" id="telepon" name="telepon" placeholder="telepon">
+                    <h4 for="telepon">Nomor Telepon :</h4>
+                    <input type="tel" class="form-control" id="telepon" name="telepon" placeholder="Nomor Telepon" required>
                 </div>
                 <div class="form-group">
-                    <label for="request">alat apa yang mau anda request?</label>
-                    <input type="text" class="form-control" id="request" name="request" placeholder="Masukkan request anda">
+                    <h4 for="request">Item apa yang mau anda request? :</h4>
+                    <input type="text" class="form-control" id="request" name="request" placeholder="Masukkan request anda" required>
                 </div>
                 <div class="form-group">
-                    <label for="deskripsi">Deskripsi</label>
-                    <textarea class="form-control" rows="6" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" ></textarea>
+                    <h4 for="deskripsi">Deskripsi Item :</h4>
+                    <textarea class="form-control" rows="6" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" required></textarea>
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" id="submit" value="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg" id="submit" value="submit" style="width: 100px">Submit</button>
                 </div>
-                <br><br>
+                <br>
+                <br>
             </div>
+        </form>
 
-        @endsection
+        <!-- Sweet Alert -->
+        <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
+        <script>
+            // Sweet Alert
+        </script>
+
+    </div>
+</div>
+        
+
+@endsection

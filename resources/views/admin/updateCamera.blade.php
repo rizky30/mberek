@@ -16,13 +16,13 @@
 
 
  <div class="content-wrapper">
-          <div class="box box-primary">
+    <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Update Camera</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-       <form action="update/{{$kameras->id_kamera}}" method="post" enctype="multipart/form-data">
+            <form action="update/{{$kameras->id_kamera}}" method="post" enctype="multipart/form-data">
               <div class="box-body">
                     {{method_field('patch')}}
                   <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -69,15 +69,15 @@
 
                  <?php endif ?>
                 </select>
-              </div>
+                </div>
 
-          <div class="form-group">
-                <label for="tipe">Tipe</label>
-                <input type="text" class="form-control" id="tipe" name="tipe" placeholder="masukkan harga sewa" value="{{$kameras->tipe}}">
-              </div>
+                <div class="form-group">
+                  <label for="tipe">Tipe</label>
+                  <input type="text" class="form-control" id="tipe" name="tipe" placeholder="masukkan harga sewa" value="{{$kameras->tipe}}">
+                </div>
 
 
-              <div class="form-group">
+                <div class="form-group">
                   <label for="deskripsi">Deskripsi</label>
                    <textarea class="form-control" rows="6" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi"  >{{$kameras->deskripsi}}</textarea>
                 </div>
@@ -93,6 +93,22 @@
                   <label for="harga_sewa">Harga Sewa</label>
                   <input type="text" class="form-control" id="harga_sewa" name="harga_sewa" placeholder="masukkan harga sewa" value="{{$kameras->harga_sewa}} ">
                 </div>
+
+                <div class="form-group">
+                  <label for="status">status</label>
+                  <select class="form-control select2" style="width: 100%;" name="status" id="status">
+                     <?php if ($kameras->status=='tersedia'): ?>
+                     <option value="tersedia">{{$kameras->status}}</option>
+                     <option value="kosong">kosong</option>
+
+                     <?php elseif ($kameras->status=='kosong'): ?>
+                     <option value="kosong">{{$kameras->status}}</option>
+                     <option value="tersedia">tersedia</option>
+
+                     <?php endif ?>
+                  </select>
+                </div>
+
                 <div class="form-group">
                   <label for="gambar">Masukkan Foto</label>
                   <input type="file" id="gambar" name="gambar">
@@ -101,13 +117,13 @@
 
                  
                 </div>
-              </div>
+                </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary" id="submit" value="submit">Submit</button>
               </div>
             </form>
-          </div>
+    </div>
 </div>
           @endsection

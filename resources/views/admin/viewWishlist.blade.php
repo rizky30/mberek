@@ -15,7 +15,7 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <h1 style="float: left">
-                Masukkan
+                Wish
                 <small>List</small>
             </h1>
             <div class="box-tools">
@@ -69,15 +69,17 @@
                                     <tr>
 
                                         <th>Id</th>
-                                        <th>Name</th>
+                                        <th>Nama</th>
                                         <th>Email</th>
-                                        <th>Message</th>
+                                        <th>Nomor Telepon</th>
+                                        <th>Request</th>
+                                        <th>Deskripsi</th>
                                         <th>Lihat</th>
                                         <th>Delete</th>
 
                                     </tr>
                                 </thead>
-                                @foreach($masukkan as $msk)
+                                @foreach($wishlist as $wish)
                                     <tbody>
                                         <tr>
 
@@ -88,16 +90,18 @@
                                               <td>{{$kameras->foto}}</td>
                                             --}}
 
-                                            <td>{{$msk->id_masukkan}}</td>
-                                            <td>{{$msk->name}}</td>
-                                            <td>{{$msk->email}}</td>
-                                            <td>{{$msk->message}}</td>
+                                            <td>{{$wish->id_wishlist}}</td>
+                                            <td>{{$wish->nama}}</td>
+                                            <td>{{$wish->email}}</td>
+                                            <td>{{$wish->telepon}}</td>
+                                            <td>{{$wish->request}}</td>
+                                            <td>{{$wish->deskripsi}}</td>
 
                                             {{--   <td>{{$kamera->foto}}</td> --}}
 
 
-                                            <td><a href="lihatMasukkan/{{$msk->id_masukkan}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                                            <td><a href="deleteMasukkan/{{$msk->id_masukkan}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                                            <td><a href="lihatWishlist/{{$wish->id_wishlist}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                                            <td><a href="deleteWishlist/{{$wish->id_wishlist}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                                         </tr>
                                     </tbody>
                                 @endforeach

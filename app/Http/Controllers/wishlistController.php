@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\contact;
+use App\wishlist;
 use Illuminate\Http\Request;
 
 use Input; # untuk inputan
@@ -13,7 +13,7 @@ use Redirect; #untuk redirect (saat error)
 
 use DB;
 
-class contactController extends Controller
+class wishlistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,10 +23,15 @@ class contactController extends Controller
     public function index()
     {
         //
-        return view('layouts/contact');
+        return view('/layouts/wishlist');
     }
 
-
+    public function viewWishlist()
+    {
+        //
+        $wishlist = wishlist::all();
+        return view('/admin/viewWishlist',compact('wishlist'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -38,13 +43,6 @@ class contactController extends Controller
         //
     }
 
-    public function viewMasukkan()
-    {
-        //
-        $masukkan = contact::all();
-        return view('/admin/viewMasukkan',compact('masukkan'));
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -54,12 +52,15 @@ class contactController extends Controller
     public function store(Request $request)
     {
         //
-        $contact = new contact;
-        $contact->name=Input::get("name");
-        $contact->email=Input::get("email");
-        $contact->message=Input::get("message");
-        $contact->save();
-        return redirect('contact');
+        $wishlist = new wishlist;
+        $wishlist->nama=Input::get("nama");
+        $wishlist->email=Input::get("email");
+        $wishlist->telepon=Input::get("telepon");
+        $wishlist->request=Input::get("request");
+        $wishlist->deskripsi=Input::get("deskripsi");
+        $wishlist->save();
+        return redirect('wishlist');
+        
 
     }
 
@@ -69,10 +70,10 @@ class contactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id_masukkan)
+    public function show($id_wishlist)
     {
-        $masukkan = DB::table("contacts")->where('id_masukkan',$id_masukkan)->first();
-        return view('admin/detilMasukkan',compact('masukkan'));
+        $wishlist = DB::table("wishlist")->where('id_wishlist',$id_wishlist)->first();
+        return view('admin/detilWishlist',compact('wishlist'));
     }
 
     /**
@@ -104,10 +105,10 @@ class contactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_masukkan)
+    public function destroy($id_wishlist)
     {
-        $masukkan = DB::table("contacts")->where('id_masukkan',$id_masukkan);
-        $masukkan->delete();
-        return redirect('/admin/viewMasukkan');
+        $wishlist = DB::table("wishlist")->where('id_wishlist',$id_wishlist);
+        $wishlist->delete();
+        return redirect('/admin/viewWishlist');
     }
 }

@@ -49,6 +49,13 @@
                     
                        <label style="font-size: 30px">{{$kameras->harga_sewa}}</label>
                   </div>
+
+                  <div class="form-group">
+                    <h3 for="status">Status : </h3>
+
+                    <label style="font-size: 30px">{{$kameras->status}}</label>
+                  </div>
+
                   <div class="form-group">
                     <h3 for="foto"> Foto : </h3>
 

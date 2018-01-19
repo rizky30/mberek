@@ -74,6 +74,7 @@ class KameraController extends Controller
         return redirect('/admin/viewCamera');
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -132,6 +133,7 @@ class KameraController extends Controller
         $kamera->deskripsi=Input::get("deskripsi");
         $kamera->fitur=Input::get("fitur");
         $kamera->harga_sewa=Input::get("harga_sewa");
+        $kamera->status=Input::get("status");
       
 
         if(Input::hasFile("gambar")){

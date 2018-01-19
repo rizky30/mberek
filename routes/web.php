@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/','HomeController@index' 
     );
 
@@ -23,12 +24,16 @@ Route::get('/gallery', 'GalleryController@index');
 //khusuzon contact
 Route::get('/contact', 'ContactController@index');
 Route::post('/storeContact', "ContactController@store");
-//
+Route::get('/admin/lihatMasukkan/{id_masukkan}', 'ContactController@show');
+Route::get('/admin/deleteMasukkan/{id_masukkan}', 'ContactController@destroy');
 Route::get('/admin/viewMasukkan', 'ContactController@viewMasukkan');
 
 //khusuzon wishlist
-Route::get('/wishlist', 'wishlistController@index');
-Route::post('/storeWishlist', "wishlistController@store");
+Route::get('/wishlist', 'WishlistController@index');
+Route::post('/storeWishlist', "WishlistController@store");
+Route::get('/admin/lihatWishlist/{id_wishlist}', 'WishlistController@show');
+Route::get('/admin/deleteWishlist/{id_wishlist}', 'WishlistController@destroy');
+Route::get('admin/viewWishlist', 'WishlistController@viewWishlist');
 
 // show kamera
 Route::get('/sewa/kamera', 'SewaKameraController@index');
@@ -85,7 +90,7 @@ Route::get('/logout', function() {
     //
   Auth::logout();
 
-  return Redirect::to('/home');
+  return Redirect::to('/login');
 })->middleware('auth');
 
 Route::group( ['middleware' => 'auth' ], function()
@@ -175,7 +180,10 @@ Route::post('/admin/storeAksesoris', "AksesorisController@storeAksesoris"
 );
 Route::get('/admin/deleteAksesoris/{id_aksesoris}', 'AksesorisController@destroy' 
     //
-);  
+);
+
+// Khusuzon Masukkan
+
 
 // Route::get('admin/home', function() {
 //     //

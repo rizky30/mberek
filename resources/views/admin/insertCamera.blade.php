@@ -30,7 +30,7 @@
 
 
                 <div class="form-group">
-                <label for="merk">merk</label>
+                <label for="merk">Merk</label>
                 <select class="form-control select2" style="width: 100%;" name="merk" id="merk">
                   <option selected="selected" value="canon">canon</option>
                   <option value="nikon">nikon</option>
@@ -69,7 +69,7 @@
                 <label for="status">status</label>
                 <select class="form-control select2" style="width: 100%;" name="status" id="status">
                   <option selected="selected" value="tersedia">tersedia</option>
-                  <option value="koso">kosong</option>
+                  <option value="kosong">kosong</option>
                 </select>
               </div>
 

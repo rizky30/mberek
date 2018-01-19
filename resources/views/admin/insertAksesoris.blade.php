@@ -30,7 +30,7 @@
 
 
                 <div class="form-group">
-                <label for="merk">jenis</label>
+                <label for="merk">Jenis</label>
                 <select class="form-control select2" style="width: 100%;" name="jenis" id="jenis">
                   <option selected="selected" value="tripod">tripod</option>
                   <option value="lighting">lighting</option>

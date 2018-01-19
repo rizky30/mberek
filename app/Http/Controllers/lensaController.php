@@ -134,6 +134,7 @@ class lensaController extends Controller
         $lensas->deskripsi=Input::get("deskripsi");
         $lensas->fitur=Input::get("fitur");
         $lensas->harga_sewa=Input::get("harga_sewa");
+        $lensas->status=Input::get("status");
       
 
         if(Input::hasFile("gambar")){
@@ -175,7 +176,6 @@ class lensaController extends Controller
     public function destroy($id_lensa)
     {
         //
-           // $lensas = lensa::find($id_lensa);
         $lensas = DB::table("lensas")->where('id_lensa',$id_lensa);
         $lensas->delete();
         return redirect('/admin/viewLensa');

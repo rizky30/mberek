@@ -4,15 +4,21 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
+  <div class="content-header">
+    <h1 style="float: left">
       Aksesoris
       <small>List</small>
     </h1>
-    <ol class="breadcrumb">
-      <li><a href="/admin/home"><i class="fa fa-dashboard"></i> Home</a></li>
-    </ol>
-  </section>
+    <div class="box-tools">
+      <div class="input-group input-group-sm" style="width: 200px; float: right">
+        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+        <div class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Main content -->
   <section class="content">
@@ -43,60 +49,53 @@
      <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">List Aksesoris</h3>
 
-              <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
     
             <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
+            <div class=" table-responsive">
               <table class="table table-hover">
-                <tr>
-                  
-                  <th>Id</th> 
-                  <th>Jenis</th>
-                  <th>Tipe</th>
-                  <th>Fitur</th>
-                  <th>Harga Sewa</th>
-                  <th>Foto</th>
-                  <th>Lihat</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-               
-                </tr>
-  @foreach($aksesoris as $aks)
-                <tr>
-               
-                
-                 {{--  <td>{{$kameras->brand}} </td>
-                  <td>{{$kameras->harga_sewa}}</td>
-                  <td>{{$kameras->foto}}</td>
- --}}       
-                  
-                  <td>{{$aks->id}}</td>
-                  <td>{{$aks->jenis}}</td>
-                  <td>{{$aks->tipe}}</td>
-                  <td>{{$aks->fitur}}</td>
-                  <td>{{$aks->harga_sewa}}</td>
-                {{--   <td>{{$kamera->foto}}</td> --}}
-                <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="140px" height="80px"></td>
+                <thead style="background-color: #0E2231; color: white;">
+                  <tr>
+                    <th>Id</th>
+                    <th>Jenis</th>
+                    <th>Tipe</th>
+                    <th>Fitur</th>
+                    <th>Harga Sewa</th>
+                    <th>Status</th>
+                    <th>Foto</th>
+                    <th>Lihat</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
 
-                   <td><a href="lihatAksesoris/{{$aks->id}}"><i class=" glyphicon glyphicon-eye-open"></i></a></td>
-                  <td><a href="editAksesoris/{{$aks->id}}"><i class="glyphicon glyphicon-edit"></i></a></td>
-                  <td><a href="deleteAksesoris/{{$aks->id}}"><i class=" glyphicon glyphicon-trash"></i></a></td>
-                  
-                       @endforeach 
-                </tr>
+                @foreach($aksesoris as $aks)
+                  <tbody>
+                    <tr>
+
+
+                     {{--  <td>{{$kameras->brand}} </td>
+                      <td>{{$kameras->harga_sewa}}</td>
+                      <td>{{$kameras->foto}}</td>
+     --}}
+
+                      <td>{{$aks->id}}</td>
+                      <td>{{$aks->jenis}}</td>
+                      <td>{{$aks->tipe}}</td>
+                      <td>{{$aks->fitur}}</td>
+                      <td>{{$aks->harga_sewa}}</td>
+                      <td>{{$aks->status}}</td>
+                    {{--   <td>{{$kamera->foto}}</td> --}}
+                    <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="140px" height="80px"></td>
+
+                       <td><a href="lihatAksesoris/{{$aks->id}}" class="btn btn-primary"><i class="fa fa-eye"></i></a></td>
+                      <td><a href="editAksesoris/{{$aks->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="deleteAksesoris/{{$aks->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                    </tr>
+                  </tbody>
+                @endforeach
+
                
               </table>
             </div>

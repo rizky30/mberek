@@ -4,7 +4,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Sumber Rejeki</b> Panel</span>
+      <span class="logo-lg"><b>Sumber Rejeki</b> <small>Panel</small></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -35,7 +35,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" onclick="profile();" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="btn btn-default pull-right">
                       <a href="{{'/logout'}}" 
@@ -55,3 +55,20 @@
       </div>
     </nav>
   </header>
+
+  <!-- Sweet Alert -->
+  <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
+  <script>
+    function profile() {
+      swal({
+        html:
+          '<div class="panel-header"><img src="{{ URL::to('/image/'.Auth::user()->gambar) }}" class="img-circle" alt="User Image" style="width:15rem"  /></div>' +
+          '<div style="text-align:center;"><h2>{{ Auth::user()->name }}</h2>' +
+          '<h4 style="color:rgb(48, 133, 214);">{{ Auth::user()->email }}</h4>' +
+          '<h4>{{ Auth::user()->tel }}</div></h4>',
+          showCloseButton: true,
+      })
+    }
+  </script>

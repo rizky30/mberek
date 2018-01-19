@@ -97,10 +97,14 @@ h1{
     margin-bottom: 10px;
 }
 
-.alert alert-succes{
-    background-color: #39dc79;
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
 }
 
-.alert alert-fail{
-    background-color: #d9534f;
+.alert-danger {
+    color: #d9534f;
+    background-color: #f2dede;
+    border-color: #ebccd1;
 }
