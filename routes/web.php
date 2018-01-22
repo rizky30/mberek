@@ -21,6 +21,15 @@ Route::get('/services', 'ServicesController@index');
 Route::get('/gallery', 'GalleryController@index');
 
 
+// khusuzon insert admin & view admin
+
+Route::post('/admin/storeAdmin', "DaftarController@store");
+Route::get('/admin/viewAdmin', 'DaftarController@show');
+Route::get('/admin/deleteAdmin/{id}', 'DaftarController@destroy');
+Route::get('/admin/insertAdmin', 'DaftarController@insert');
+
+
+
 //khusuzon contact
 Route::get('/contact', 'ContactController@index');
 Route::post('/storeContact', "ContactController@store");

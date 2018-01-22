@@ -23,7 +23,7 @@ protected $table="daftar_admins";
 
     // var_dump($data); --> buat testing
 
- 	$username=Input::get('username');
+ 	$username=Input::get('nama');
  	// echo $username;
  	 	$email=Input::get('email');
  	// echo $email;
@@ -31,7 +31,9 @@ protected $table="daftar_admins";
  	// echo $pass;
  	 	$telp=Input::get('tel');
 
- 	 	$gambar=Input::get('gambar');
+ 	 
+
+     
 
  	 	$users=new daftar();
 
@@ -39,7 +41,14 @@ protected $table="daftar_admins";
  	 	$users->email=$email;
  	 	$users->password=$pass;
  	 	$users->tel=$telp;
- 	 	$users->gambar=$gambar;
+
+ 	 	if(Input::hasFile("gambar")){
+            $files = Input::file("gambar");
+            $tipe = time()."_".$files->getClientOriginalName();
+            $image = $files->move(public_path().'/image',$tipe);
+            $users->gambar=$tipe;
+        }
+
 
  	 	$users->save();
 
