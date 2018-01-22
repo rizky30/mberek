@@ -99,7 +99,7 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-                @foreach($kameras as $kamera)
+                @foreach($hasil as $kamera)
                   <tbody>
                     <tr>
 

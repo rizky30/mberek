@@ -18,7 +18,7 @@
       Camera
       <small>List</small>
     </h1>
-    <form action="{{ url('queryKamera') }}" method="GET">
+    <form action="{{ url('queryAksesoris') }}" method="GET">
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 200px; float: right">
         <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
@@ -99,7 +99,7 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-                @foreach($kameras as $kamera)
+                @foreach($hasil as $kamera)
                   <tbody>
                     <tr>
 

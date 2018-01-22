@@ -196,7 +196,12 @@ Route::get('/admin/deleteAksesoris/{id_aksesoris}', 'AksesorisController@destroy
     //
 );
 
-Route::get('query', 'CariController@search');
+// khusuzon cari
+Route::get('queryKamera', 'CariController@searchKamera');
+Route::get('queryLensa', 'CariController@searchLensa');
+Route::get('queryAksesoris', 'CariController@searchAksesoris');
+Route::get('queryContact', 'CariController@searchContact');
+Route::get('queryWishlist', 'CariController@searchWishlist');
 
 
 

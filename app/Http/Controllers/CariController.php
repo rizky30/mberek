@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\aksesoris;
 use App\kamera;
 use App\lensa;
+use App\wishlist;
+use App\contact;
 
 
 
@@ -24,26 +26,28 @@ class CariController extends Controller
 
     public function searchKamera(Request $request)
     {
-        $query =  $request->get('q');
-        $hasil = kamera::where('judul','LIKE','%'.query.'%')->paginate(10);
+        $query = $request->get('q');
+        $hasil = kamera::where('merk', 'LIKE', '%' . $query . '%')->paginate(10);
 
-        return view('result',compact('hasil','query'));
+     
+
+        return view('admin/resultKamera',compact('hasil','query'));
     }
 
         public function searchLensa(Request $request)
     {
         $query =  $request->get('q');
-        $hasil = kamera::where('judul','LIKE','%'.query.'%')->paginate(10);
+        $hasil = lensa::where('merk','LIKE','%'.$query.'%')->paginate(10);
 
-        return view('result',compact('hasil','query'));
+        return view('admin/resultLensa',compact('hasil','query'));
     }
 
         public function searchAksesoris(Request $request)
     {
         $query =  $request->get('q');
-        $hasil = kamera::where('judul','LIKE','%'.query.'%')->paginate(10);
+        $hasil = aksesoris::where('jenis','LIKE','%'.$query.'%')->paginate(10);
 
-        return view('result',compact('hasil','query'));
+        return view('/admin/resultAksesoris',compact('hasil','query'));
     }
 
 

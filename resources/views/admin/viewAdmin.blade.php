@@ -15,18 +15,10 @@
   <!-- Content Header (Page header) -->
   <div class="content-header">
     <h1 style="float: left">
-      Lensa
+      Admin
       <small>List</small>
     </h1>
-      <div class="box-tools">
-          <div class="input-group input-group-sm" style="width: 200px; float: right">
-              <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-              <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-              </div>
-          </div>
-      </div>
+      
   </div>
 
   <!-- Main content -->
