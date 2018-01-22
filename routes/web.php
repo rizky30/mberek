@@ -182,6 +182,10 @@ Route::get('/admin/deleteAksesoris/{id_aksesoris}', 'AksesorisController@destroy
     //
 );
 
+Route::get('query', 'CariController@search');
+
+
+
 // Khusuzon Masukkan
 
 
