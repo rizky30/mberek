@@ -160,4 +160,39 @@ class KameraController extends Controller
         $kameras->delete();
         return redirect('/admin/viewCamera');
     }
+
+    public function show_canon()
+    {
+        $kameras = DB::table('kameras')->where('merk', 'canon')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    public function show_nikon()
+    {
+        $kameras = DB::table('kameras')->where('merk', 'nikon')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    public function show_sony()
+    {
+        $kameras = DB::table('kameras')->where('merk', 'sony')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    public function show_samsung()
+    {
+        $kameras = DB::table('kameras')->where('merk', 'samsung')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    public function show_gopro()
+    {
+        $kameras = DB::table('kameras')->where('merk', 'gopro')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
 }

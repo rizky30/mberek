@@ -118,6 +118,11 @@ Route::get('/admin/home', 'AdminController@dashboard');
 
 // khusuzon camera
 Route::get('/admin/viewCamera', 'kameraController@viewCamera');
+Route::get('/admin/viewCamera/canon', 'kameraController@show_canon');
+Route::get('/admin/viewCamera/nikon', 'kameraController@show_nikon');
+Route::get('/admin/viewCamera/samsung', 'kameraController@show_samsung');
+Route::get('/admin/viewCamera/sony', 'kameraController@show_sony');
+Route::get('/admin/viewCamera/goPro', 'kameraController@show_gopro');
 Route::get('/admin/insertCamera', 'kameraController@insertCamera');
 Route::post('/admin/storeCamera', "kameraController@storeCamera" 
     //
