@@ -133,11 +133,7 @@
               </li>
               <li class="list-inline-item">⋅</li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">⋅</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="/prosedurSewa">Terms of Use</a>
               </li>
             </ul>
             <p class="text-muted small mb-4 mb-lg-0">© Sumber Rejeki 2017. All Rights Reserved.</p>

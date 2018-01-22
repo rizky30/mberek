@@ -45,8 +45,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="insertCamera"><i class="fa fa-plus"></i> Insert Camera</a></li>
-            <li><a href="viewCamera"><i class="fa fa-search"></i> Lihat Camera</a></li>
+            <li><a href="/admin/insertCamera"><i class="fa fa-plus"></i> Insert Camera</a></li>
+            <li><a href="/admin/viewCamera"><i class="fa fa-search"></i> Lihat Camera</a></li>
           </ul>
         </li>
 
@@ -59,8 +59,8 @@
             </span>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="insertLensa"><i class="fa fa-plus"></i> Insert Lesa</a></li>
-                  <li><a href="viewLensa"><i class="fa fa-search"></i> Lihat Lensa</a></li>
+                  <li><a href="/admin/insertLensa"><i class="fa fa-plus"></i> Insert Lesa</a></li>
+                  <li><a href="/admin/viewLensa"><i class="fa fa-search"></i> Lihat Lensa</a></li>
               </ul>
           </li>
 
@@ -73,8 +73,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="insertAksesoris"><i class="fa fa-plus"></i> Insert Aksesoris</a></li>
-            <li><a href="viewAksesoris"><i class="fa fa-search"></i> Lihat Aksesoris</a></li>
+            <li><a href="/admin/insertAksesoris"><i class="fa fa-plus"></i> Insert Aksesoris</a></li>
+            <li><a href="/admin/viewAksesoris"><i class="fa fa-search"></i> Lihat Aksesoris</a></li>
           </ul>
         </li>
 
@@ -88,7 +88,7 @@
             </span>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="viewWishlist"><i class="fa fa-eye"></i> Lihat Whistlist</a></li>
+                  <li><a href="/admin/viewWishlist"><i class="fa fa-eye"></i> Lihat Whistlist</a></li>
               </ul>
           </li>
 
@@ -101,7 +101,7 @@
             </span>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="viewMasukkan"><i class="fa fa-eye"></i> Lihat Masukkan</a></li>
+                  <li><a href="/admin/viewMasukkan"><i class="fa fa-eye"></i> Lihat Masukkan</a></li>
               </ul>
           </li>
 
