@@ -53,6 +53,14 @@
                 <input type="number" class="form-control" id="tel" name="tel" placeholder="Masukkan Nomor Telepon" required>
               </div>
 
+               <div class="form-group">
+                <label for="level">level</label>
+                <select class="form-control select2" style="width: 100%;" name="level" id="level">
+                  <option selected="selected" value="admin">admin</option>
+                  <option value="operator">operator</option>                 
+                </select>
+              </div>
+
 
 
                 <div class="form-group">

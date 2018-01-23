@@ -31,6 +31,8 @@ protected $table="daftar_admins";
  	// echo $pass;
  	 	$telp=Input::get('tel');
 
+        $level=Input::get('level');
+
  	 
 
      
@@ -41,6 +43,7 @@ protected $table="daftar_admins";
  	 	$users->email=$email;
  	 	$users->password=$pass;
  	 	$users->tel=$telp;
+        $users->level=$level;
 
  	 	if(Input::hasFile("gambar")){
             $files = Input::file("gambar");

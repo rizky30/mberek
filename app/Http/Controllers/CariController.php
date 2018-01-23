@@ -28,7 +28,6 @@ class CariController extends Controller
     {
         $query = $request->get('q');
         $hasil = kamera::where('merk', 'LIKE', '%' . $query . '%')->paginate(10);
-
      
 
         return view('admin/resultKamera',compact('hasil','query'));
@@ -37,7 +36,7 @@ class CariController extends Controller
         public function searchLensa(Request $request)
     {
         $query =  $request->get('q');
-        $hasil = lensa::where('merk','LIKE','%'.$query.'%')->paginate(10);
+        $hasil = lensa::where('merk','LIKE','%'.$query.'%')->paginate(10) && lensa::where('tipe','LIKE','%'.$query.'%')->paginate(10);
 
         return view('admin/resultLensa',compact('hasil','query'));
     }

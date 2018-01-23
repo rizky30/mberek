@@ -1,3 +1,11 @@
+<?php
+
+use App\Daftar;
+
+ $daftar = Daftar::all();
+
+?>
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar" style="margin-top: 10px">
@@ -116,9 +124,12 @@
               <ul class="treeview-menu">
                   <li><a href="/admin/viewAdmin"><i class="fa fa-plus"></i>Lihat Admin</a></li>
               </ul>
+              @if(Auth::user()->level=='admin')
               <ul class="treeview-menu">
                   <li><a href="/admin/insertAdmin"><i class="fa fa-eye"></i>Insert Admin</a></li>
-              </ul>              
+              </ul>     
+            
+              @endif
           </li>          
 
 
