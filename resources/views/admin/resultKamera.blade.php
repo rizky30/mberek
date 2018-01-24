@@ -29,21 +29,23 @@
     </div>
      </form>
     <div class="box-tools">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" value="">Show all</button>
-        <ul class="dropdown-menu" role="menu">
-          <li>Pilih Merk</li>
-          <li>Canon</li>
-          <li>Nikon</li>
-        </ul>
+      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
+        <select class="form-control input-sm" style="width: 100%;">
+          <option selected="selected">Pilih Brand</option>
+          <option value="canon">canon</option>
+          <option value="nikon">nikon</option>
+          <option value="samsung">samsung</option>
+          <option value="sony">sony</option>
+          <option value="goPro">goPro</option>
+        </select>
       </div>
     </div>
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
         <select class="form-control input-sm" style="width: 100%;">
           <option selected="selected">Pilih Status</option>
-          <option value="#">Tersedia</option>
-          <option value="#">Kosong</option>
+          <option href="#">Tersedia</option>
+          <option href="#">Kosong</option>
         </select>
       </div>
     </div>
@@ -51,6 +53,8 @@
 
   <!-- Main content -->
   <section class="content">
+
+
       
     <div class="row">
         <div class="col-xs-12">
@@ -73,10 +77,16 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-                @foreach($kameras as $kamera)
+                @foreach($hasil as $kamera)
                   <tbody>
                     <tr>
 
+
+                    {{--
+                      <td>{{$kameras->brand}}</td>
+                      <td>{{$kameras->harga_sewa}}</td>
+                      <td>{{$kameras->foto}}</td>
+                    --}}
 
                       <td>{{$kamera->id_kamera}}</td>
                       <td>{{$kamera->merk}}</td>
@@ -98,13 +108,15 @@
               </table>
             </div>
                  
-            
+            <!-- /.box-body -->
           </div>
-        
+          <!-- /.box -->
         </div>
     </div>  
 
   </section>
-
+  <!-- /.content -->
 </div>
+<!-- /.content-wrapper -->
 @endsection
+

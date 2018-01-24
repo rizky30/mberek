@@ -15,10 +15,12 @@
   <!-- Content Header (Page header) -->
   <div class="content-header">
     <h1 style="float: left;">
-      Camera
+      Aksesoris
       <small>List</small>
     </h1>
-    <form action="{{ url('queryKamera') }}" method="GET">
+   <br>
+
+    <form action="{{ url('queryAksesoris') }}" method="GET">
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 200px; float: right">
         <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
@@ -29,28 +31,33 @@
     </div>
      </form>
     <div class="box-tools">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" value="">Show all</button>
-        <ul class="dropdown-menu" role="menu">
-          <li>Pilih Merk</li>
-          <li>Canon</li>
-          <li>Nikon</li>
-        </ul>
+      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
+        <select class="form-control input-sm" style="width: 100%;">
+          <option selected="selected">Pilih Brand</option>
+          <option value="canon">canon</option>
+          <option value="nikon">nikon</option>
+          <option value="samsung">samsung</option>
+          <option value="sony">sony</option>
+          <option value="goPro">goPro</option>
+        </select>
       </div>
     </div>
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
         <select class="form-control input-sm" style="width: 100%;">
           <option selected="selected">Pilih Status</option>
-          <option value="#">Tersedia</option>
-          <option value="#">Kosong</option>
+          <option href="#">Tersedia</option>
+          <option href="#">Kosong</option>
         </select>
       </div>
     </div>
+    
   </div>
+
 
   <!-- Main content -->
   <section class="content">
+
       
     <div class="row">
         <div class="col-xs-12">
@@ -73,7 +80,7 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-                @foreach($kameras as $kamera)
+                @foreach($hasil as $kamera)
                   <tbody>
                     <tr>
 
@@ -98,13 +105,15 @@
               </table>
             </div>
                  
-            
+            <!-- /.box-body -->
           </div>
-        
+          <!-- /.box -->
         </div>
     </div>  
 
   </section>
-
+  <!-- /.content -->
 </div>
+<!-- /.content-wrapper -->
 @endsection
+

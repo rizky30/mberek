@@ -1,3 +1,12 @@
+         @if(Auth::user())
+         @else
+
+<?php
+    return view('layouts/home');
+
+    ?>
+
+    @endif
 @extends('admin.layouts.app')
 
 @section('main-content')
@@ -5,11 +14,11 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header">
-    <h1 style="float: left">
-      Aksesoris
+    <h1 style="float: left;">
+      Camera
       <small>List</small>
     </h1>
-    <form action="{{ url('queryAksesoris') }}" method="GET">
+    <form action="{{ url('queryLensa') }}" method="GET">
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 200px; float: right">
         <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
@@ -19,6 +28,27 @@
       </div>
     </div>
      </form>
+    <div class="box-tools">
+      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
+        <select class="form-control input-sm" style="width: 100%;">
+          <option selected="selected">Pilih Brand</option>
+          <option value="canon">canon</option>
+          <option value="nikon">nikon</option>
+          <option value="samsung">samsung</option>
+          <option value="sony">sony</option>
+          <option value="goPro">goPro</option>
+        </select>
+      </div>
+    </div>
+    <div class="box-tools">
+      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
+        <select class="form-control input-sm" style="width: 100%;">
+          <option selected="selected">Pilih Status</option>
+          <option href="#">Tersedia</option>
+          <option href="#">Kosong</option>
+        </select>
+      </div>
+    </div>
   </div>
 
   <!-- Main content -->
@@ -47,21 +77,20 @@
     </div>
     <!-- /.box --> --}}
 
-     <div class="row">
+      
+    <div class="row">
         <div class="col-xs-12">
           <div class="box">
 
-
-    
             <!-- /.box-header -->
             <div class=" table-responsive">
               <table class="table table-hover">
                 <thead style="background-color: #0E2231; color: white;">
                   <tr>
                     <th>Id</th>
-                    <th>Jenis</th>
-                    <th>Tipe</th>
-                    <th>Fitur</th>
+                    <th>Brand</th>
+                    <th>tipe</th>
+                    <th>fitur</th>
                     <th>Harga Sewa</th>
                     <th>Status</th>
                     <th>Foto</th>
@@ -70,29 +99,29 @@
                     <th>Delete</th>
                   </tr>
                 </thead>
-
-                @foreach($aksesoris as $aks)
+                @foreach($hasil as $kamera)
                   <tbody>
                     <tr>
 
 
-                     {{--  <td>{{$kameras->brand}} </td>
+                    {{--
+                      <td>{{$kameras->brand}}</td>
                       <td>{{$kameras->harga_sewa}}</td>
                       <td>{{$kameras->foto}}</td>
-     --}}
+                    --}}
 
-                      <td>{{$aks->id}}</td>
-                      <td>{{$aks->jenis}}</td>
-                      <td>{{$aks->tipe}}</td>
-                      <td>{{$aks->fitur}}</td>
-                      <td>{{$aks->harga_sewa}}</td>
-                      <td>{{$aks->status}}</td>
+                      <td>{{$kamera->id_kamera}}</td>
+                      <td>{{$kamera->merk}}</td>
+                      <td>{{$kamera->tipe}}</td>
+                      <td>{{$kamera->fitur}}</td>
+                      <td>{{$kamera->harga_sewa}}</td>
+                      <td>{{$kamera->status}}</td>
                     {{--   <td>{{$kamera->foto}}</td> --}}
-                    <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="140px" height="80px"></td>
+                      <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatAksesoris/{{$aks->id}}" class="btn btn-primary"><i class="fa fa-eye"></i></a></td>
-                      <td><a href="editAksesoris/{{$aks->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteAksesoris/{{$aks->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="lihatCamera/{{$kamera->id_kamera}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="editCamera/{{$kamera->id_kamera}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="deleteCamera/{{$kamera->id_kamera}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach
@@ -105,7 +134,7 @@
           </div>
           <!-- /.box -->
         </div>
-      </div>  
+    </div>  
 
   </section>
   <!-- /.content -->

@@ -23,12 +23,19 @@ class AdminController extends Controller
     {
         //
        $kameras = DB::table('kameras')->get();
+       $lensa = DB::table('lensas')->get();
+       $aksesoris = DB::table('aksesoris')->get();
        $users = DB::table('daftar_admins')->get();
+       $wishlist = DB::table('wishlist')->get();
+       $contacts = DB::table('contacts')->get();
+
+
+
 
         // $kam = Camera::all();
       
 
-        return view("admin/home",compact('kameras','users'));
+        return view("admin/home",compact('kameras','users','aksesoris','lensa','wishlist','contacts'));
     }
 
     /**

@@ -12,6 +12,8 @@ use Redirect; #untuk redirect (saat error)
 
 use App\Daftar; # memanggil model
 
+use DB;
+
 class DaftarController extends Controller
 {
     /**
@@ -45,6 +47,17 @@ class DaftarController extends Controller
         echo "login";
     }
 
+    public function show()
+    {
+         $user = Daftar::all();
+        return view('/admin/viewAdmin',compact('user'));
+    }
+
+    public function insert()
+    {
+        return view('/admin/insertAdmin');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -65,12 +78,13 @@ public function store()
 
         $rule=array(
 
-            'username'=>'required',
+            'nama'=>'required',
             'email'=>'required|email',
             'password'=>'required|min:6',
             'cpassword'=>'required|same:password',
             'tel'=>'required',
-            'gambar'=>'required'
+            'gambar'=>'required',
+        'level'=>'required'
 
         );
 
@@ -84,22 +98,13 @@ public function store()
         $validator=validator::make($data,$rule,$message);
 
         if($validator->fails()){
-            return Redirect::to('daftar')->withErrors($validator);
+            return Redirect::to('admin/insertAdmin')->withErrors($validator);
         }else{
             Daftar::formstore(Input::except(array('_token'.'cpassword')));
-            return Redirect::to('daftar/sukses')->with('succes','Telah sukses mendaftar ! Terimakasih !');
+            return Redirect::to('admin/insertAdmin')->with('succes','Telah sukses mendaftar ! Terimakasih !');
         }
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -133,5 +138,8 @@ public function store()
     public function destroy($id)
     {
         //
+             $lensas = DB::table("daftar_admins")->where('id',$id);
+        $lensas->delete();
+        return redirect('/admin/viewAdmin');
     }
 }

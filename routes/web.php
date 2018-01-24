@@ -21,6 +21,15 @@ Route::get('/services', 'ServicesController@index');
 Route::get('/gallery', 'GalleryController@index');
 
 
+// khusuzon insert admin & view admin
+
+Route::post('/admin/storeAdmin', "DaftarController@store");
+Route::get('/admin/viewAdmin', 'DaftarController@show');
+Route::get('/admin/deleteAdmin/{id}', 'DaftarController@destroy');
+Route::get('/admin/insertAdmin', 'DaftarController@insert');
+
+
+
 //khusuzon contact
 Route::get('/contact', 'ContactController@index');
 Route::post('/storeContact', "ContactController@store");
@@ -187,6 +196,24 @@ Route::get('/admin/deleteAksesoris/{id_aksesoris}', 'AksesorisController@destroy
     //
 );
 
+// khusuzon cari
+Route::get('queryKamera', 'CariController@searchKamera');
+Route::get('queryLensa', 'CariController@searchLensa');
+Route::get('queryAksesoris', 'CariController@searchAksesoris');
+Route::get('queryContact', 'CariController@searchContact');
+Route::get('queryWishlist', 'CariController@searchWishlist');
+
+    });
+// khusuzon cari di front-end
+
+
+Route::get('searchKamera', 'CariController@homeKamera');
+Route::get('searchLensa', 'CariController@homeLensa');
+Route::get('searchAksesoris', 'CariController@homeAksesoris');
+
+
+
+
 // Khusuzon Masukkan
 
 
@@ -196,4 +223,3 @@ Route::get('/admin/deleteAksesoris/{id_aksesoris}', 'AksesorisController@destroy
 // })->name('post');
 
 
-    });

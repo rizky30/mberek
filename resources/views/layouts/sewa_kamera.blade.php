@@ -20,7 +20,18 @@
         <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
           <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
         </div>
+      
+       <form action="{{ url('searchKamera') }}" method="GET">
+    <div class="box-tools">
+      <div class="input-group input-group-sm" style="width: 200px; float: right">
+        <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
+        <div class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+        </div>
       </div>
+    </div>
+     </form>
+   </div>
 
       <div class="row">
         <div class="product-top" style="margin-bottom: 50px">

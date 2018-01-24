@@ -2,7 +2,7 @@
     
   @section('title', 'Sewa')
 
-  @section('content')  
+  @section('content')
     <div class="container" style="margin-top: 60px;">
 
       <!-- <ol class="breadcrumb">
@@ -11,16 +11,17 @@
         </li>
         <li class="breadcrumb-item active">Sewa</li>
       </ol> -->
-      
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row text-center">
         <div class="col-lg-10 mx-auto">
           <h2>Pilih Produk</h2>
         </div>
         <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-          <a class="btn btn-block btn-lg btn-primary" href="/sewa/lensa">Tampilkan Semua</a>
+          <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
         </div>
-               <form action="{{ url('searchLensa') }}" method="GET">
+      
+       <form action="{{ url('searchAksesoris') }}" method="GET">
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 200px; float: right">
         <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
@@ -30,17 +31,18 @@
       </div>
     </div>
      </form>
-      </div>
+   </div>
 
       <div class="row">
         <div class="product-top" style="margin-bottom: 50px">
             <div class="product-one">
-              @foreach($lensas as $lensa)
+              @foreach($hasil as $kamera)
+
               <div class="col-md-3 product-left">
                 <div class="product-main product-main-alert simpleCart_shelfItem">
 
                   <!-- Berdasar Kondisi -->
-                  @if($lensa->status=='tersedia')
+                   @if($kamera->status=='tersedia')
                   <div class="alert alert-success alert-product" id="tersedia">
                     <strong>Tersedia</strong>
                   </div>
@@ -48,17 +50,23 @@
                   <div class="alert alert-danger alert-product" id="tidak_tersedia">
                     <strong>Tidak Tersedia</strong>
                   </div>
+                  
                   @endif
+                  <a class="mask" href="/detil/kamera/{{$kamera->id_kamera}}">
 
-                  <a class="mask" href="/detil/lensa/{{$lensa->id_lensa}}">
-                    <img class="img-responsive zoom-img" src="{{ URL::to('/image/' . $lensa->gambar) }}"   />
+ 
+<img class="img-responsive zoom-img" src="{{ URL::to('/image/' . $kamera->gambar) }}"   />
 
                   </a>
+
+
                   <div class="product-bottom text-center">
-                    <h3>{{ $lensa->tipe }}</h3>
-                    <p>{{ $lensa->merk }}</p>
-                    <h4><span class=" item_price">{{ $lensa->harga_sewa }}</span></h4>
+                    <h3>{{ $kamera->tipe }}</h3>
+                    <p>{{ $kamera->merk }}</p>
+                    <h4><span class=" item_price">{{ $kamera->harga_sewa }}</span></h4>
                   </div>
+
+
                 </div>
               </div>
               @endforeach

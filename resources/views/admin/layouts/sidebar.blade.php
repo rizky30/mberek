@@ -1,3 +1,5 @@
+
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar" style="margin-top: 10px">
@@ -104,6 +106,25 @@
                   <li><a href="/admin/viewMasukkan"><i class="fa fa-eye"></i> Lihat Masukkan</a></li>
               </ul>
           </li>
+
+
+          <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-user-circle"></i> <span>Admin</span>
+                  <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="/admin/viewAdmin"><i class="fa fa-plus"></i>Lihat Admin</a></li>
+              </ul>
+              @if(Auth::user()->level=='admin')
+              <ul class="treeview-menu">
+                  <li><a href="/admin/insertAdmin"><i class="fa fa-eye"></i>Insert Admin</a></li>
+              </ul>     
+            
+              @endif
+          </li>          
 
 
 
