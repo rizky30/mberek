@@ -1,12 +1,4 @@
-         @if(Auth::user())
-         @else
 
-<?php
-    return view('layouts/home');
-
-    ?>
-
-    @endif
 @extends('admin.layouts.app')
 
 @section('main-content')

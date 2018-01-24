@@ -49,6 +49,36 @@ class CariController extends Controller
         return view('/admin/resultAksesoris',compact('hasil','query'));
     }
 
+        public function homeKamera(Request $request)
+    {
+        $query = $request->get('q');
+        $hasil = kamera::where('merk', 'LIKE', '%' . $query . '%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
+     
+
+        return view('/layouts/result_sewaKamera',compact('hasil','query'));
+    }
+
+
+          public function homeLensa(Request $request)
+        {
+        $query = $request->get('q');
+        $hasil = lensa::where('merk', 'LIKE', '%' . $query . '%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
+     
+
+        return view('/layouts/result_sewaLensa',compact('hasil','query'));
+    }
+
+          public function homeAksesoris(Request $request)
+    {
+        $query = $request->get('q');
+        $hasil = aksesoris::where('jenis', 'LIKE', '%' . $query . '%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
+     
+
+        return view('/layouts/result_sewaAksesoris',compact('hasil','query'));
+    }
+
+
+
 
     /**
      * Show the form for creating a new resource.

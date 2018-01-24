@@ -203,6 +203,15 @@ Route::get('queryAksesoris', 'CariController@searchAksesoris');
 Route::get('queryContact', 'CariController@searchContact');
 Route::get('queryWishlist', 'CariController@searchWishlist');
 
+    });
+// khusuzon cari di front-end
+
+
+Route::get('searchKamera', 'CariController@homeKamera');
+Route::get('searchLensa', 'CariController@homeLensa');
+Route::get('searchAksesoris', 'CariController@homeAksesoris');
+
+
 
 
 // Khusuzon Masukkan
@@ -214,4 +223,3 @@ Route::get('queryWishlist', 'CariController@searchWishlist');
 // })->name('post');
 
 
-    });

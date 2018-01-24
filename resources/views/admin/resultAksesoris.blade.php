@@ -15,9 +15,11 @@
   <!-- Content Header (Page header) -->
   <div class="content-header">
     <h1 style="float: left;">
-      Camera
+      Aksesoris
       <small>List</small>
     </h1>
+   <br>
+
     <form action="{{ url('queryAksesoris') }}" method="GET">
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 200px; float: right">
@@ -49,33 +51,12 @@
         </select>
       </div>
     </div>
+    
   </div>
+
 
   <!-- Main content -->
   <section class="content">
-
-{{--     <!-- Default box -->
-    <div class="box">
-      <div class="box-header with-border">
-        <h3 class="box-title">Title</h3>
-
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-            <i class="fa fa-minus"></i></button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-            <i class="fa fa-times"></i></button>
-        </div>
-      </div>
-      <div class="box-body">
-        Start creating your amazing application!
-      </div>
-      <!-- /.box-body -->
-      <div class="box-footer">
-        Footer
-      </div>
-      <!-- /.box-footer-->
-    </div>
-    <!-- /.box --> --}}
 
       
     <div class="row">
@@ -103,12 +84,6 @@
                   <tbody>
                     <tr>
 
-
-                    {{--
-                      <td>{{$kameras->brand}}</td>
-                      <td>{{$kameras->harga_sewa}}</td>
-                      <td>{{$kameras->foto}}</td>
-                    --}}
 
                       <td>{{$kamera->id_kamera}}</td>
                       <td>{{$kamera->merk}}</td>
