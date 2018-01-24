@@ -27,7 +27,7 @@ class CariController extends Controller
     public function searchKamera(Request $request)
     {
         $query = $request->get('q');
-        $hasil = kamera::where('merk', 'LIKE', '%' . $query . '%')->paginate(10);
+        $hasil = kamera::where('merk', 'LIKE', '%' . $query . '%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
      
 
         return view('admin/resultKamera',compact('hasil','query'));
@@ -36,7 +36,7 @@ class CariController extends Controller
         public function searchLensa(Request $request)
     {
         $query =  $request->get('q');
-        $hasil = lensa::where('merk','LIKE','%'.$query.'%')->paginate(10) && lensa::where('tipe','LIKE','%'.$query.'%')->paginate(10);
+        $hasil = lensa::where('merk','LIKE','%'.$query.'%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
 
         return view('admin/resultLensa',compact('hasil','query'));
     }
@@ -44,7 +44,7 @@ class CariController extends Controller
         public function searchAksesoris(Request $request)
     {
         $query =  $request->get('q');
-        $hasil = aksesoris::where('jenis','LIKE','%'.$query.'%')->paginate(10);
+        $hasil = aksesoris::where('jenis','LIKE','%'.$query.'%')->orWhere('tipe','LIKE','%'.$query.'%')->paginate(10);
 
         return view('/admin/resultAksesoris',compact('hasil','query'));
     }
