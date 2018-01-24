@@ -28,23 +28,21 @@
       </div>
     </div>
     <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
-        <select class="form-control input-sm" style="width: 100%;">
-          <option selected="selected">Pilih Brand</option>
-          <option value="canon">canon</option>
-          <option value="nikon">nikon</option>
-          <option value="samsung">samsung</option>
-          <option value="sony">sony</option>
-          <option value="goPro">goPro</option>
-        </select>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" value="">Show all</button>
+        <ul class="dropdown-menu" role="menu">
+          <li>Pilih Merk</li>
+          <li>Canon</li>
+          <li>Nikon</li>
+        </ul>
       </div>
     </div>
     <div class="box-tools">
       <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
         <select class="form-control input-sm" style="width: 100%;">
           <option selected="selected">Pilih Status</option>
-          <option href="#">Tersedia</option>
-          <option href="#">Kosong</option>
+          <option value="#">Tersedia</option>
+          <option value="#">Kosong</option>
         </select>
       </div>
     </div>
