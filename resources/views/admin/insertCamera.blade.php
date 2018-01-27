@@ -70,6 +70,8 @@
                 <select class="form-control select2" style="width: 100%;" name="status" id="status">
                   <option selected="selected" value="tersedia">tersedia</option>
                   <option value="kosong">kosong</option>
+                  <option value="sedang_dipesan">sedang dipesan</option>
+                  
                 </select>
               </div>
 

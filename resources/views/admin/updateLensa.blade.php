@@ -94,20 +94,30 @@
                   <input type="text" class="form-control" id="harga_sewa" name="harga_sewa" placeholder="masukkan harga sewa" value="{{$lensas->harga_sewa}} ">
                 </div>
 
-                  <div class="form-group">
-                      <label for="status">status</label>
-                      <select class="form-control select2" style="width: 100%;" name="status" id="status">
-                          <?php if ($lensas->status=='tersedia'): ?>
-                          <option value="tersedia">{{$lensas->status}}</option>
-                          <option value="kosong">kosong</option>
+                    <div class="form-group">
+                  <label for="status">status</label>
+                  <select class="form-control select2" style="width: 100%;" name="status" id="status">
+                     <?php if ($lensas->status=='tersedia'): ?>
+                     <option value="tersedia">{{$lensas->status}}</option>
+                     <option value="kosong">kosong</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
 
-                          <?php elseif ($lensas->status=='kosong'): ?>
-                          <option value="kosong">{{$lensas->status}}</option>
-                          <option value="tersedia">tersedia</option>
+                     <?php elseif ($lensas->status=='kosong'): ?>
+                     <option value="kosong">{{$lensas->status}}</option>
+                     <option value="tersedia">tersedia</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
 
-                          <?php endif ?>
-                      </select>
-                  </div>
+                 
+
+
+                   <?php elseif ($lensas->status=='sedang_dipesan'): ?>
+                     <option value="sedang_dipesan">{{$lensas->status}}</option>
+                     <option value="tersedia">tersedia</option>
+                     <option value="kosong">kosong</option>
+
+                     <?php endif ?>
+                  </select>
+                </div>
 
                 <div class="form-group">
                   <label for="gambar">Masukkan Foto</label>

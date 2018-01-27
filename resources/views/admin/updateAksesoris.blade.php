@@ -55,12 +55,29 @@
                 </div>
 
                    <div class="form-group">
-                <label for="status">status</label>
-                <select class="form-control select2" style="width: 100%;" name="status" id="status">
-                  <option selected="selected" value="tersedia">tersedia</option>
-                  <option value="koso">kosong</option>
-                </select>
-              </div>
+                  <label for="status">status</label>
+                  <select class="form-control select2" style="width: 100%;" name="status" id="status">
+                     <?php if ($aksesoris->status=='tersedia'): ?>
+                     <option value="tersedia">{{$aksesoris->status}}</option>
+                     <option value="kosong">kosong</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
+
+                     <?php elseif ($aksesoris->status=='kosong'): ?>
+                     <option value="kosong">{{$aksesoris->status}}</option>
+                     <option value="tersedia">tersedia</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
+
+                 
+
+
+                   <?php elseif ($aksesoris->status=='sedang_dipesan'): ?>
+                     <option value="sedang_dipesan">{{$aksesoris->status}}</option>
+                     <option value="tersedia">tersedia</option>
+                     <option value="kosong">kosong</option>
+
+                     <?php endif ?>
+                  </select>
+                </div>
               
                 <div class="form-group">
                   <label for="gambar">Masukkan Foto</label>

@@ -100,10 +100,20 @@
                      <?php if ($kameras->status=='tersedia'): ?>
                      <option value="tersedia">{{$kameras->status}}</option>
                      <option value="kosong">kosong</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
 
                      <?php elseif ($kameras->status=='kosong'): ?>
                      <option value="kosong">{{$kameras->status}}</option>
                      <option value="tersedia">tersedia</option>
+                     <option value="sedang_dipesan">sedang_dipesan</option>
+
+                 
+
+
+                   <?php elseif ($kameras->status=='sedang_dipesan'): ?>
+                     <option value="sedang_dipesan">{{$kameras->status}}</option>
+                     <option value="tersedia">tersedia</option>
+                     <option value="kosong">kosong</option>
 
                      <?php endif ?>
                   </select>
