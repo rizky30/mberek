@@ -110,7 +110,7 @@
                       <td>{{$kameras->foto}}</td>
                     --}}
 
-                      <td>{{$kamera->id_kamera}}</td>
+                      <td>Ls_{{$kamera->id_lensa}}</td>
                       <td>{{$kamera->merk}}</td>
                       <td>{{$kamera->tipe}}</td>
                       <td>{{$kamera->fitur}}</td>
@@ -119,9 +119,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                       <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatCamera/{{$kamera->id_kamera}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                      <td><a href="editCamera/{{$kamera->id_kamera}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteCamera/{{$kamera->id_kamera}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="lihatCamera/{{$kamera->id_lensa}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="editCamera/{{$kamera->id_lensa}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="deleteCamera/{{$kamera->id_lensa}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach

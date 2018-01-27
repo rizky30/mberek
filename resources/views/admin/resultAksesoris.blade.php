@@ -85,7 +85,7 @@
                     <tr>
 
 
-                      <td>{{$kamera->id_kamera}}</td>
+                      <td>Aks_{{$kamera->id}}</td>
                       <td>{{$kamera->merk}}</td>
                       <td>{{$kamera->tipe}}</td>
                       <td>{{$kamera->fitur}}</td>
@@ -94,9 +94,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                       <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatCamera/{{$kamera->id_kamera}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                      <td><a href="editCamera/{{$kamera->id_kamera}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteCamera/{{$kamera->id_kamera}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="lihatCamera/{{$kamera->id}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="editCamera/{{$kamera->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="deleteCamera/{{$kamera->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach

@@ -22,6 +22,9 @@
             "App\\": "app/"
         }
     },
+    "files": [
+        "app/Helpers/string.php"
+    ],
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"

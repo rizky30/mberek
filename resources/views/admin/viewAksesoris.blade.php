@@ -81,7 +81,7 @@
                       <td>{{$kameras->foto}}</td>
      --}}
 
-                      <td>{{$aks->id}}</td>
+                      <td>Aks_{{$aks->id}}</td>
                       <td>{{$aks->jenis}}</td>
                       <td>{{$aks->tipe}}</td>
                       <td>{{$aks->fitur}}</td>

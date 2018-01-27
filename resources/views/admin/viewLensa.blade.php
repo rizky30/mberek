@@ -88,7 +88,7 @@
                       <td>{{$kameras->foto}}</td>
      --}}
 
-                      <td>{{$lensa->id_lensa}}</td>
+                      <td>Ls_{{$lensa->id_lensa}}</td>
                       <td>{{$lensa->merk}}</td>
                       <td>{{$lensa->tipe}}</td>
                       <td>{{$lensa->fitur}}</td>

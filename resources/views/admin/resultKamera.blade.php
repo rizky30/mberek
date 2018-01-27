@@ -88,7 +88,7 @@
                       <td>{{$kameras->foto}}</td>
                     --}}
 
-                      <td>{{$kamera->id_kamera}}</td>
+                      <td>Km_{{$kamera->id_kamera}}</td>
                       <td>{{$kamera->merk}}</td>
                       <td>{{$kamera->tipe}}</td>
                       <td>{{$kamera->fitur}}</td>
