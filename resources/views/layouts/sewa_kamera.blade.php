@@ -16,22 +16,24 @@
       <div class="row text-center">
         <div class="col-lg-10 mx-auto">
           <h2>Pilih Produk</h2>
+          <br>
         </div>
-        <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-          <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
-        </div>
-      
-       <form action="{{ url('searchKamera') }}" method="GET">
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 200px; float: right">
-        <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
-        <div class="input-group-btn">
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-        </div>
+
+        <form action="{{ url('searchKamera') }}" method="GET" class="col-md-5 col-lg-3 col-xl-4 mx-auto">
+            <div class="box-tools">
+              <div class="input-group input-group-sm">
+                <input type="text" name="q" class="form-control pull-right validate" placeholder="Search" style="width: 500px">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+                <span style="padding-left: 2rem">
+                  <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
+                </span>
+              </div>
+            </div>
+        </form>
+
       </div>
-    </div>
-     </form>
-   </div>
 
       <div class="row">
         <div class="product-top" style="margin-bottom: 50px">

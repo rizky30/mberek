@@ -19,34 +19,15 @@
       <small>List</small>
     </h1>
     <form action="{{ url('queryKamera') }}" method="GET">
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 200px; float: right">
-        <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
-        <div class="input-group-btn">
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      <div class="box-tools">
+        <div class="input-group input-group-sm" style="width: 200px; float: right">
+          <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </div>
         </div>
       </div>
-    </div>
-     </form>
-    <div class="box-tools">
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" value="">Show all</button>
-        <ul class="dropdown-menu" role="menu">
-          <li>Pilih Merk</li>
-          <li>Canon</li>
-          <li>Nikon</li>
-        </ul>
-      </div>
-    </div>
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
-        <select class="form-control input-sm" style="width: 100%;">
-          <option selected="selected">Pilih Status</option>
-          <option value="#">Tersedia</option>
-          <option value="#">Kosong</option>
-        </select>
-      </div>
-    </div>
+    </form>
   </div>
 
   <!-- Main content -->

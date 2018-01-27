@@ -70,8 +70,8 @@
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
                 <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
                 <a href="/prosedurSewa">Prosedur Sewa</a>
-                <a href="/wishlist">Wisht Item</a>
-                <a href="/contact">Masukkan</a>
+                <a href="/wishlist">Wish Item</a>
+                <a href="/contact">Masukan</a>
               </div>
             </li>
 

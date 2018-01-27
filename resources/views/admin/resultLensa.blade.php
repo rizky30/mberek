@@ -19,36 +19,15 @@
       <small>List</small>
     </h1>
     <form action="{{ url('queryLensa') }}" method="GET">
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 200px; float: right">
-        <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
-        <div class="input-group-btn">
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      <div class="box-tools">
+        <div class="input-group input-group-sm" style="width: 200px; float: right">
+          <input type="text" name="q" class="form-control pull-right validate" placeholder="Search">
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </div>
         </div>
       </div>
-    </div>
-     </form>
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
-        <select class="form-control input-sm" style="width: 100%;">
-          <option selected="selected">Pilih Brand</option>
-          <option value="canon">canon</option>
-          <option value="nikon">nikon</option>
-          <option value="samsung">samsung</option>
-          <option value="sony">sony</option>
-          <option value="goPro">goPro</option>
-        </select>
-      </div>
-    </div>
-    <div class="box-tools">
-      <div class="input-group input-group-sm" style="width: 100px; float: right; margin-right: 2rem">
-        <select class="form-control input-sm" style="width: 100%;">
-          <option selected="selected">Pilih Status</option>
-          <option href="#">Tersedia</option>
-          <option href="#">Kosong</option>
-        </select>
-      </div>
-    </div>
+    </form>
   </div>
 
   <!-- Main content -->
