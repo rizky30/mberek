@@ -120,9 +120,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                     <td><img src="{{URL::to('/image/'.$aks->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatAksesoris/{{$aks->id}}" class="btn btn-primary"><i class="fa fa-eye"></i></a></td>
-                      <td><a href="editAksesoris/{{$aks->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteAksesoris/{{$aks->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="/admin/lihatAksesoris/{{$aks->id}}" class="btn btn-primary"><i class="fa fa-eye"></i></a></td>
+                      <td><a href="/admin/editAksesoris/{{$aks->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="/admin/deleteAksesoris/{{$aks->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach

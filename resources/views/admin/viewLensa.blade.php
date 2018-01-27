@@ -126,9 +126,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                     <td><img src="{{URL::to('/image/'.$lensa->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatLensa/{{$lensa->id_lensa}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                      <td><a href="editLensa/{{$lensa->id_lensa}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteLensa/{{$lensa->id_lensa}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="/admin/lihatLensa/{{$lensa->id_lensa}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="/admin/editLensa/{{$lensa->id_lensa}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="/admin/deleteLensa/{{$lensa->id_lensa}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                 </tbody>
 
