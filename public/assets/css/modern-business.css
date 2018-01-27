@@ -104,7 +104,6 @@ h1,h2,h3,h4 {
     font-family: 'BreeSerif-Regular';
 }
 .product-bottom h4 i {
-    background: url('/assets/images/icon/cart-2.png') no-repeat;
     width: 20px;
     height: 15px;
     display: inline-block;
@@ -112,7 +111,6 @@ h1,h2,h3,h4 {
     vertical-align: middle;
 }
 .product-left:hover .product-bottom h4 i{
-  background: url('/assets/images/icon/cart-3.png') no-repeat;
 }
 .product-bottom {
     text-align: left;
@@ -203,7 +201,6 @@ a.mask {
     border: none;
 }
 .product-bottom h4 i {
-    background: url('/assets/images/icon/cart-2.png') no-repeat;
     width: 20px;
     height: 15px;
     display: inline-block;

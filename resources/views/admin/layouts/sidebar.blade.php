@@ -116,11 +116,11 @@
             </span>
               </a>
               <ul class="treeview-menu">
-                  <li><a href="/admin/viewAdmin"><i class="fa fa-plus"></i>Lihat Admin</a></li>
+                  <li><a href="/admin/viewAdmin"><i class="fa fa-eye"></i>Lihat Admin</a></li>
               </ul>
               @if(Auth::user()->level=='admin')
               <ul class="treeview-menu">
-                  <li><a href="/admin/insertAdmin"><i class="fa fa-eye"></i>Insert Admin</a></li>
+                  <li><a href="/admin/insertAdmin"><i class="fa fa-plus"></i>Insert Admin</a></li>
               </ul>     
             
               @endif

@@ -180,4 +180,41 @@ class lensaController extends Controller
         $lensas->delete();
         return redirect('/admin/viewLensa');
     }
+
+    //    Method untuk mengambil status barang
+    public function show_tersedia()
+    {
+        $lensas = DB::table('lensas')->where('status', 'tersedia')->get();
+
+        return view('admin/viewLensa', ['lensas' => $lensas]);
+    }
+
+    public function show_kosong()
+    {
+        $lensas = DB::table('lensas')->where('status', 'kosong')->get();
+
+        return view('admin/viewLensa', ['lensas' => $lensas]);
+    }
+
+    //    Method untuk mengambil nama merk
+    public function show_canon()
+    {
+        $lensas = DB::table('lensas')->where('merk', 'canon')->get();
+
+        return view('admin/viewLensa', ['lensas' => $lensas]);
+    }
+
+    public function show_nikon()
+    {
+        $lensas = DB::table('lensas')->where('merk', 'nikon')->get();
+
+        return view('admin/viewLensa', ['lensas' => $lensas]);
+    }
+
+    public function show_sony()
+    {
+        $lensas = DB::table('lensas')->where('merk', 'sony')->get();
+
+        return view('admin/viewLensa', ['lensas' => $lensas]);
+    }
 }

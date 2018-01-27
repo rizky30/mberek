@@ -161,6 +161,22 @@ class KameraController extends Controller
         return redirect('/admin/viewCamera');
     }
 
+    //    Method untuk mengambil status barang
+    public function show_tersedia()
+    {
+        $kameras = DB::table('kameras')->where('status', 'tersedia')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    public function show_kosong()
+    {
+        $kameras = DB::table('kameras')->where('status', 'kosong')->get();
+
+        return view('admin/viewCamera', ['kameras' => $kameras]);
+    }
+
+    //    Method untuk mengambil nama merk
     public function show_canon()
     {
         $kameras = DB::table('kameras')->where('merk', 'canon')->get();

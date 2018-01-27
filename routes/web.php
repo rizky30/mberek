@@ -132,6 +132,8 @@ Route::get('/admin/viewCamera/nikon', 'kameraController@show_nikon');
 Route::get('/admin/viewCamera/samsung', 'kameraController@show_samsung');
 Route::get('/admin/viewCamera/sony', 'kameraController@show_sony');
 Route::get('/admin/viewCamera/goPro', 'kameraController@show_gopro');
+Route::get('/admin/viewCamera/tersedia', 'kameraController@show_tersedia');
+Route::get('/admin/viewCamera/kosong', 'kameraController@show_kosong');
 Route::get('/admin/insertCamera', 'kameraController@insertCamera');
 Route::post('/admin/storeCamera', "kameraController@storeCamera" 
     //
@@ -151,6 +153,11 @@ Route::get('/admin/deleteCamera/{id_kamera}', 'kameraController@destroy'
 
 // khusuzon lensa
 Route::get('/admin/viewLensa', 'LensaController@viewLensa');
+Route::get('/admin/viewLensa/canon', 'LensaController@show_canon');
+Route::get('/admin/viewLensa/nikon', 'LensaController@show_nikon');
+Route::get('/admin/viewLensa/sony', 'LensaController@show_sony');
+Route::get('/admin/viewLensa/tersedia', 'LensaController@show_tersedia');
+Route::get('/admin/viewLensa/kosong', 'LensaController@show_kosong');
 Route::get('/admin/insertLensa', 'LensaController@insertLensa');
 Route::get('/admin/update', 'LensaController@index');
 Route::post('/admin/insertLensa', "LensaController@storeLensa" 
@@ -175,6 +182,13 @@ Route::get('/admin/deleteLensa/{id_lensa}', 'LensaController@destroy'
 
 // khusuzon aksesoris
 Route::get('/admin/viewAksesoris', 'AksesorisController@viewAksesoris');
+Route::get('/admin/viewAksesoris/tripod', 'AksesorisController@show_tripod');
+Route::get('/admin/viewAksesoris/lighting', 'AksesorisController@show_lighting');
+Route::get('/admin/viewAksesoris/microphone', 'AksesorisController@show_microphone');
+Route::get('/admin/viewAksesoris/battery', 'AksesorisController@show_battery');
+Route::get('/admin/viewAksesoris/memory', 'AksesorisController@show_memory');
+Route::get('/admin/viewAksesoris/tersedia', 'AksesorisController@show_tersedia');
+Route::get('/admin/viewAksesoris/kosong', 'AksesorisController@show_kosong');
 Route::get('/admin/insertAksesoris', 'AksesorisController@insertAksesoris');
 Route::get('/admin/update', 'AksesorisController@index');
 Route::post('/admin/insertAksesoris', "AksesorisController@storeAksesoris" 

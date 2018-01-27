@@ -27,7 +27,7 @@
                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
               </div>
               <span style="padding-left: 2rem">
-                <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
+                <a class="btn btn-block btn-lg btn-primary" href="/sewa/aksesoris">Tampilkan Semua</a>
               </span>
             </div>
           </div>
