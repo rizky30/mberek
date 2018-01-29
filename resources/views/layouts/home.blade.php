@@ -125,20 +125,74 @@
       <br>
       <br>
 
-
-    <section class="call-to-action text-center" style="background: url({!! asset('assets/images/bg/building.jpg') !!}) no-repeat center center; position: relative; background-color: #343a40; background-size: cover; padding-top: 7rem; padding-bottom: 7rem; background-attachment: fixed;">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-9 mx-auto text-white">
-              <h2 class="mb-4">Tertarik dengan Kami? Sewa sekarang!</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background: url({!! asset('assets/images/bg/building.jpg') !!}) no-repeat center center; position: relative; background-color: #343a40; background-size: cover; padding-top: 2rem; padding-bottom: 2rem; background-attachment: fixed; height: 40rem">
+      <ol class="carousel-indicators" style="margin-bottom: 50px">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-caption d-none d-md-block" style="position: unset;">
+          <h1 style="font-family: Capinella;font-size: 5rem">Customer Says</h1>
+        </div>
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active">
+            <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px">
+              <img class="img-circle" src="{!! asset('assets/images/testi/ci.jpg') !!}" alt="" style="height: 200px; width: 200px;">
+              <br>
+              <br>
+              <h3>Chelsea Islan</h3>
+              <p style="padding-left: 100px; padding-right: 100px;">" Doing the extra mile. Kata kata tersebut yang pertama kali terlintas pada saat pengalaman pertama kali sewa kamera di Sumber Rejeki Camera Rent. Very like it! "</p>
             </div>
-            <div class="col-md-5 col-lg-3 col-xl-4 mx-auto">
-              <a class="btn btn-block btn-lg btn-primary" href="/prosedurSewa">Sewa</a>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px">
+              <img class="img-circle" src="{!! asset('assets/images/testi/gg.jpg') !!}" alt="" style="height: 200px; width: 200px;">
+              <br>
+              <br>
+              <h3>Gita Gutawa</h3>
+              <p style="padding-left: 100px; padding-right: 100px;">" Barangnya bagus, pelayanannya baik. Langsung di respon lo, gapake lama deh! Barangnya juga bagus dan terawat dengan baik, Pokoknya recommended banget! "</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block" style="margin-bottom: 100px">
+              <img class="img-circle" src="{!! asset('assets/images/testi/bcl.jpg') !!}" alt="" style="height: 200px; width: 200px;">
+              <br>
+              <br>
+              <h3>Bunga Citra Lestari</h3>
+              <p style="padding-left: 100px; padding-right: 100px;">" Suka bete banget kalo lagi travelling lupa bawa kamera. Solusi cepatnya ya cuman sewa kamera, suka banget sama Sumber Rejeki Camera Rent. Karena Pelayanannya baik dan barangnya selalu up to date. Good Job! "</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    {{--<section class="call-to-action text-center" style="background: url({!! asset('assets/images/bg/building.jpg') !!}) no-repeat center center; position: relative; background-color: #343a40; background-size: cover; padding-top: 7rem; padding-bottom: 7rem; background-attachment: fixed;">--}}
+        {{--<div class="overlay"></div>--}}
+        {{--<div class="container">--}}
+          {{--<div class="row">--}}
+            {{--<div class="col-xl-9 mx-auto text-white">--}}
+              {{--<h2 class="mb-4">Tertarik dengan Kami? Sewa sekarang!</h2>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-5 col-lg-3 col-xl-4 mx-auto">--}}
+              {{--<a class="btn btn-block btn-lg btn-primary" href="/prosedurSewa">Sewa</a>--}}
+            {{--</div>--}}
+          {{--</div>--}}
+        {{--</div>--}}
+      {{--</section>--}}
 
       <footer class="footer text-center">
         <div class="container">
@@ -167,4 +221,6 @@
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.8034804625202!2d112.65841082914362!3d-7.9768286715120515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5c1b44e3%3A0xf6c889ac7452dc3a!2sSekolah+Menengah+Kejuruan+Telkom+Malang!5e0!3m2!1sid!2sid!4v1511447200540"></iframe>
         <br>
       </section>
+
+
   @endsection  
