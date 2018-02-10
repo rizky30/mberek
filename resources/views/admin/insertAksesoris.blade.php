@@ -31,14 +31,11 @@
 
                 <div class="form-group">
                 <label for="merk">Jenis</label>
-                <select class="form-control select2" style="width: 100%;" name="jenis" id="jenis">
-                  <option selected="selected" value="tripod">tripod</option>
-                  <option value="lighting">lighting</option>
-                  <option value="microphone">microphone</option>
-                  <option value="extra_battery">extra_battery</option>
-                  <option value="memory">memory</option>
-                 
-                </select>
+             <select class="form-control select2" style="width: 100%;" name="merk" id="merk">
+      @foreach($aks as $post)
+                        <option value="{{ $post->jenis }}">{{ $post->jenis }}</option>
+                    @endforeach
+          </select>
               </div>
 
           <div class="form-group">

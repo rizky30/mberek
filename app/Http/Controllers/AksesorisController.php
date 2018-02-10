@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\aksesoris;
+use App\jenis;
 use Illuminate\Http\Request;
 use Input; # untuk inputan
 
@@ -40,7 +41,8 @@ class AksesorisController extends Controller
      public function insertAksesoris()
     {
         //
-        return view('admin/insertAksesoris');
+        $aks = jenis::all();
+        return view('admin/insertAksesoris',compact('aks'));
     }
 
 

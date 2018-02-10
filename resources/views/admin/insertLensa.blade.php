@@ -29,12 +29,10 @@
                 <div class="form-group">
                 <label for="merk">Merk</label>
                 <select class="form-control select2" style="width: 100%;" name="merk" id="merk">
-                  <option selected="selected" value="canon">canon</option>
-                  <option value="nikon">nikon</option>
-                  <option value="sony">sony</option>
-                  <option value="gopro">gopro</option>
-                  <option>d4</option>
-                </select>
+      @foreach($lensa as $post)
+                        <option value="{{ $post->merk }}">{{ $post->merk }}</option>
+                    @endforeach
+          </select>
               </div>  
 
 

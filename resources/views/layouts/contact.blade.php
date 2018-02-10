@@ -32,7 +32,7 @@
                   <p class="help-block"></p>
                 </div>
               </div>
-              <form name="femail" onsubmit="return validasiEmail()">
+              <form name="femail" onsubmit="return validasiEmail();">
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Alamat Email :</h4>
@@ -58,6 +58,7 @@
         <script>
   
           function validateForm()
+          {
  // {
  // var x=document.forms["email"]["emailUser"].value;
  // var atpos=x.indexOf("@");

@@ -27,6 +27,8 @@ Route::post('/admin/storeAdmin', "DaftarController@store");
 Route::get('/admin/viewAdmin', 'DaftarController@show');
 Route::get('/admin/deleteAdmin/{id}', 'DaftarController@destroy');
 Route::get('/admin/insertAdmin', 'DaftarController@insert');
+Route::get('/admin/insertMerk', 'DaftarController@insertMerk');
+Route::get('/admin/insertJenis', 'DaftarController@insertJenis');
 
 
 
@@ -138,6 +140,12 @@ Route::get('/admin/insertCamera', 'kameraController@insertCamera');
 Route::post('/admin/storeCamera', "kameraController@storeCamera" 
     //
 );
+Route::post('/admin/storeJenis', "DaftarController@storeJenis" 
+    //
+);
+Route::post('/admin/storeMerk', "DaftarController@storeMerk" 
+    //
+);
 Route::get('/admin/lihatCamera/{merk}', 'kameraController@show' 
     //
 );
@@ -178,6 +186,10 @@ Route::post('/admin/storeLensa', "LensaController@storeLensa"
 Route::get('/admin/deleteLensa/{id_lensa}', 'LensaController@destroy' 
     //
 );
+
+// khsuzon category
+
+
 
 
 // khusuzon aksesoris
