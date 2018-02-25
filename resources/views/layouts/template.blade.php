@@ -68,10 +68,10 @@
                 Help
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
-                <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing">PriceList</a>
+                <a href="https://docs.google.com/spreadsheets/d/1IFLufQDLG594FWQy55MEOMZnHpby-zkkldzuDoryjdU/edit?usp=sharing" target="_blank">PriceList</a>
                 <a href="/prosedurSewa">Prosedur Sewa</a>
                 <a href="/wishlist">Wish Item</a>
-                <a href="/contact">Masukan</a>
+                <a href="/contact">Komentar</a>
               </div>
             </li>
 
@@ -80,6 +80,7 @@
                 Kamera
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
+                <a href="/sewa/kamera">Semua Merk</a>
                 <a href="/sewa/kamera/canon">Canon</a>
                 <a href="/sewa/kamera/nikon">Nikon</a>
                 <a href="/sewa/kamera/sony">Sony</a>
@@ -92,6 +93,7 @@
                 Lensa
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
+                <a href="/sewa/lensa">Semua Merk</a>
                 <a href="/sewa/lensa/canon">Canon</a>
                 <a href="/sewa/lensa/nikon">Nikon</a>
                 <a href="/sewa/lensa/sony">Sony</a>
@@ -102,6 +104,7 @@
                 Aksesoris
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdownPortfolio" style="font-size: 15px; list-style-type: none;">
+                <a href="/sewa/aksesoris">Semua Jenis</a>
                 <a href="/sewa/aksesoris/tripod">Tripod</a>
                 <a href="/sewa/aksesoris/lighting">Lighting</a>
                 <a href="/sewa/aksesoris/microphone">Microphone</a>

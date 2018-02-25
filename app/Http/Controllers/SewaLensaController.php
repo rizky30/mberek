@@ -36,6 +36,20 @@ class SewaLensaController extends Controller
         return view('layouts/sewa_lensa', ['lensas' => $lensas]);
     }
 
+    public function show_tersedia()
+    {
+        $lensas = DB::table('lensas')->where('status', 'tersedia')->get();
+
+        return view('layouts/sewa_lensa', ['lensas' => $lensas]);
+    }
+
+    public function show_tidaktersedia()
+    {
+        $lensas = DB::table('lensas')->where('status', 'kosong')->get();
+
+        return view('layouts/sewa_lensa', ['lensas' => $lensas]);
+    }
+
     public function detil_lensa($id_lensa)
     {
         $lensas = DB::table('lensas')->where('id_lensa', $id_lensa)->first();

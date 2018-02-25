@@ -125,6 +125,7 @@
       <br>
       <br>
 
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background: url({!! asset('assets/images/bg/building.jpg') !!}) no-repeat center center; position: relative; background-color: #343a40; background-size: cover; padding-top: 2rem; padding-bottom: 2rem; background-attachment: fixed; height: 40rem">
       <ol class="carousel-indicators" style="margin-bottom: 50px">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -179,7 +180,6 @@
       </a>
     </div>
 
-
     {{--<section class="call-to-action text-center" style="background: url({!! asset('assets/images/bg/building.jpg') !!}) no-repeat center center; position: relative; background-color: #343a40; background-size: cover; padding-top: 7rem; padding-bottom: 7rem; background-attachment: fixed;">--}}
         {{--<div class="overlay"></div>--}}
         {{--<div class="container">--}}
@@ -221,6 +221,4 @@
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.8034804625202!2d112.65841082914362!3d-7.9768286715120515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5c1b44e3%3A0xf6c889ac7452dc3a!2sSekolah+Menengah+Kejuruan+Telkom+Malang!5e0!3m2!1sid!2sid!4v1511447200540"></iframe>
         <br>
       </section>
-
-
   @endsection  

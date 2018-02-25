@@ -27,6 +27,35 @@
           </div>
         </div>
       </div>
+
+      <div class="box-tools">
+        <a href="/admin/viewLensa" class="btn btn-warning" style="float: right; margin-right: 20px">
+          Tampilkan Semua
+        </a>
+      </div>
+      <div class="box-tools">
+        <div class="dropdown" style="float: right; margin-right: 20px">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            Pilih Status
+          </button>
+          <div class="dropdown-menu">
+            <a  href="/admin/viewLensa/tersedia">Tersedia</a>
+            <a  href="/admin/viewLensa/kosong">Kosong</a>
+          </div>
+        </div>
+      </div>
+      <div class="box-tools">
+        <div class="dropdown" style="float: right; margin-right: 20px">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Pilih Brand
+          </button>
+          <div class="dropdown-menu">
+            <a  href="/admin/viewLensa/canon">Canon</a>
+            <a  href="/admin/viewLensa/nikon">Nikon</a>
+            <a  href="/admin/viewLensa/sony">Sony</a>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 
@@ -98,9 +127,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                       <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatCamera/{{$kamera->id_lensa}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                      <td><a href="editCamera/{{$kamera->id_lensa}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteCamera/{{$kamera->id_lensa}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="/admin/lihatCamera/{{$kamera->id_lensa}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="/admin/editCamera/{{$kamera->id_lensa}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="/admin/deleteCamera/{{$kamera->id_lensa}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach

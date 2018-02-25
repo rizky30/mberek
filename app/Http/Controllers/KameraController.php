@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\kamera;
-use App\merk;
 use Illuminate\Http\Request;
 
 use Input; # untuk inputan
@@ -39,8 +38,7 @@ class KameraController extends Controller
        public function insertCamera()
     {
         //
-        $kameras = merk::all();
-        return view('admin/insertCamera',compact('kameras'));
+        return view('admin/insertCamera');
     }
 
        public function viewCamera()

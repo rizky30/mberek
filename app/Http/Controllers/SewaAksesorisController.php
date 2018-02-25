@@ -38,7 +38,7 @@ class SewaAksesorisController extends Controller
 
     public function show_battery()
     {
-    	$aksesoris = DB::table('aksesoris')->where('jenis', 'battery')->get();
+    	$aksesoris = DB::table('aksesoris')->where('jenis', 'extra_battery')->get();
 
     	return view('layouts/sewa_aksesoris', ['aksesoris' => $aksesoris]);
     }
@@ -48,6 +48,20 @@ class SewaAksesorisController extends Controller
     	$aksesoris = DB::table('aksesoris')->where('jenis', 'memory')->get();
 
     	return view('layouts/sewa_aksesoris', ['aksesoris' => $aksesoris]);
+    }
+
+    public function show_tersedia()
+    {
+        $aksesoris = DB::table('aksesoris')->where('status', 'tersedia')->get();
+
+        return view('layouts/sewa_aksesoris', ['aksesoris' => $aksesoris]);
+    }
+
+    public function show_tidaktersedia()
+    {
+        $aksesoris = DB::table('aksesoris')->where('status', 'kosong')->get();
+
+        return view('layouts/sewa_aksesoris', ['aksesoris' => $aksesoris]);
     }
 
     public function detil_aksesoris($id)

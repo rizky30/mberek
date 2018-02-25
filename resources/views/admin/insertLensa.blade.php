@@ -28,11 +28,11 @@
 
                 <div class="form-group">
                 <label for="merk">Merk</label>
-                <select class="form-control select2" style="width: 100%;" name="merk" id="merk">
-      @foreach($lensa as $post)
-                        <option value="{{ $post->merk }}">{{ $post->merk }}</option>
-                    @endforeach
-          </select>
+                <select class="form-control select2" style="width: 100%;" name="merk" id="merk" required>
+                  <option selected="selected" value="canon">canon</option>
+                  <option value="nikon">nikon</option>
+                  <option value="sony">sony</option>
+                </select>
               </div>  
 
 
@@ -42,18 +42,18 @@
 
                  <div class="form-group">
                 <label for="tipe">Tipe</label>
-                <input type="text" class="form-control" id="tipe" name="tipe" placeholder="Masukkan Tipe">
+                <input type="text" class="form-control" id="tipe" name="tipe" placeholder="Masukkan Tipe" required>
               </div>
 
 
               <div class="form-group">
                   <label for="deskripsi">Deskripsi</label>
-                   <textarea class="form-control" rows="6" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" ></textarea>
+                   <textarea class="form-control" rows="6" id="deskripsi" name="deskripsi" placeholder="Masukkan Deskripsi" required></textarea>
                 </div>
 
                       <div class="form-group">
                   <label for="deskripsi">Fitur</label>
-                   <textarea class="form-control" rows="6" id="fitur" name="fitur"  placeholder="Masukkan Fitur" ></textarea>
+                   <textarea class="form-control" rows="6" id="fitur" name="fitur"  placeholder="Masukkan Fitur" required></textarea>
                 </div>
 
               {{-- canon nikon sony samsung go pro --}}
@@ -62,12 +62,12 @@
 
                 <div class="form-group">
                   <label for="harga_sewa">Harga Sewa</label>
-                  <input type="number" class="form-control" id="harga_sewa" name="harga_sewa" placeholder="masukkan harga sewa">
+                  <input type="text" class="form-control" id="harga_sewa" name="harga_sewa" placeholder="Rp : / Hari" required>
                 </div>
 
                    <div class="form-group">
                 <label for="status">status</label>
-                <select class="form-control select2" style="width: 100%;" name="status" id="status">
+                <select class="form-control select2" style="width: 100%;" name="status" id="status" required>
                   <option selected="selected" value="tersedia">tersedia</option>
                   <option value="kosong">kosong</option>
                   <option value="sedang_dipesan">sedang dipesan</option>
@@ -77,7 +77,7 @@
 
                 <div class="form-group">
                   <label for="gambar">Masukkan Foto</label>
-                  <input type="file" id="gambar" name="gambar">
+                  <input type="file" id="gambar" name="gambar" required>
 
                  
                 </div>

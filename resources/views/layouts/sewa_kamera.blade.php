@@ -15,21 +15,24 @@
       <!-- Page Heading/Breadcrumbs -->
       <div class="row text-center">
         <div class="col-lg-10 mx-auto">
-          <h2>Pilih Produk</h2>
+          <h2>CEK KETERSEDIAAN PRODUK</h2>
           <br>
         </div>
 
         <form action="{{ url('searchKamera') }}" method="GET" class="col-md-5 col-lg-3 col-xl-4 mx-auto">
             <div class="box-tools">
               <div class="input-group input-group-sm">
-                <input type="text" name="q" class="form-control pull-right validate" placeholder="Search" style="width: 500px">
+                <input type="text" name="q" class="form-control pull-right validate" placeholder="Cari Produk Kamera" style="width: 500px; height: 40px">
                 <div class="input-group-btn">
                   <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                 </div>
-                <span style="padding-left: 2rem">
-                  <a class="btn btn-block btn-lg btn-primary" href="/sewa/kamera">Tampilkan Semua</a>
-                </span>
               </div>
+              <span style="padding-top: 10px" class="col-md-6">
+                <a class="btn btn-block btn-lg btn-success" href="/sewa/kamera/tersedia">Tersedia</a>
+              </span>
+              <span style="padding-top: 10px" class="col-md-6">
+                <a class="btn btn-block btn-lg btn-danger" href="/sewa/kamera/tidak_tersedia">Kosong</a>
+              </span>
             </div>
         </form>
 

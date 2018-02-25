@@ -27,8 +27,6 @@ Route::post('/admin/storeAdmin', "DaftarController@store");
 Route::get('/admin/viewAdmin', 'DaftarController@show');
 Route::get('/admin/deleteAdmin/{id}', 'DaftarController@destroy');
 Route::get('/admin/insertAdmin', 'DaftarController@insert');
-Route::get('/admin/insertMerk', 'DaftarController@insertMerk');
-Route::get('/admin/insertJenis', 'DaftarController@insertJenis');
 
 
 
@@ -55,6 +53,8 @@ Route::get('/sewa/kamera/nikon', 'SewaKameraController@show_nikon');
 Route::get('/sewa/kamera/sony', 'SewaKameraController@show_sony');
 Route::get('/sewa/kamera/samsung', 'SewaKameraController@show_samsung');
 Route::get('/sewa/kamera/gopro', 'SewaKameraController@show_gopro');
+Route::get('/sewa/kamera/tersedia', 'SewaKameraController@show_tersedia');
+Route::get('/sewa/kamera/tidak_tersedia', 'SewaKameraController@show_tidaktersedia');
 
 
 // show lensa
@@ -64,6 +64,8 @@ Route::get('/detil/lensa/{id_lensa}', 'SewaLensaController@detil_lensa');
 Route::get('/sewa/lensa/canon', 'SewaLensaController@show_canon');
 Route::get('/sewa/lensa/nikon', 'SewaLensaController@show_nikon');
 Route::get('/sewa/lensa/sony', 'SewaLensaController@show_sony');
+Route::get('/sewa/lensa/tersedia', 'SewaLensaController@show_tersedia');
+Route::get('/sewa/lensa/tidak_tersedia', 'SewaLensaController@show_tidaktersedia');
 
 
 // show aksesoris
@@ -75,6 +77,8 @@ Route::get('/sewa/aksesoris/lighting', 'SewaAksesorisController@show_lighting');
 Route::get('/sewa/aksesoris/microphone', 'SewaAksesorisController@show_microphone');
 Route::get('/sewa/aksesoris/battery', 'SewaAksesorisController@show_battery');
 Route::get('/sewa/aksesoris/memory', 'SewaAksesorisController@show_memory');
+Route::get('/sewa/aksesoris/tersedia', 'SewaAksesorisController@show_tersedia');
+Route::get('/sewa/aksesoris/tidak_tersedia', 'SewaAksesorisController@show_tidaktersedia');
 
 
 //layout sub menu
@@ -140,12 +144,6 @@ Route::get('/admin/insertCamera', 'kameraController@insertCamera');
 Route::post('/admin/storeCamera', "kameraController@storeCamera" 
     //
 );
-Route::post('/admin/storeJenis', "DaftarController@storeJenis" 
-    //
-);
-Route::post('/admin/storeMerk', "DaftarController@storeMerk" 
-    //
-);
 Route::get('/admin/lihatCamera/{merk}', 'kameraController@show' 
     //
 );
@@ -186,10 +184,6 @@ Route::post('/admin/storeLensa', "LensaController@storeLensa"
 Route::get('/admin/deleteLensa/{id_lensa}', 'LensaController@destroy' 
     //
 );
-
-// khsuzon category
-
-
 
 
 // khusuzon aksesoris

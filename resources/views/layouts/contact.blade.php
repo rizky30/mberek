@@ -32,14 +32,12 @@
                   <p class="help-block"></p>
                 </div>
               </div>
-              <form name="femail" onsubmit="return validasiEmail();">
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Alamat Email :</h4>
-                  <input type="email" class="form-control" id="email" name="email" onsubmit="return validateForm();" required placeholder="Masukkan Email">
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="Masukkan Email">
                 </div>
               </div>
-            </form>
               <div class="control-group form-group">
                 <div class="controls">
                   <h4>Masukan :</h4>
@@ -47,7 +45,7 @@
                 </div>
               </div>
 
-              <button type="submit" value="kirim" class="btn btn-primary btn-lg" id="sendMessageButton" style="width: 100px">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton" style="width: 100px">Kirim</button>
             </div>
           </form>
 
@@ -56,35 +54,7 @@
         <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
 
         <script>
-  
-          function validateForm()
-          {
- // {
- // var x=document.forms["email"]["emailUser"].value;
- // var atpos=x.indexOf("@");
- // var dotpos=x.lastIndexOf(".");
- // if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
- // {
-
- // alert('Isi Email dengan Benar');
-
- // }
-
-var nilai = document.forms["femail"]["email"].value;
-var at=nilai.indexOf("@");
-var dot=nilai.lastIndexOf(".");
-
-if (at<1 || dot<at+2 || dot+2>=nilai.length)
-  {
-
-      alert('Isi Email dengan Benar');
-
-      return false;
-
-  }
-
-
- }
+          // Sweet Alert
         </script>
 
     </div>

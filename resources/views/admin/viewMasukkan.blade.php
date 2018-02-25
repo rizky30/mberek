@@ -15,7 +15,7 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <h1 style="float: left">
-                Masukkan
+                Komentar
                 <small>List</small>
             </h1>
             <div class="box-tools">

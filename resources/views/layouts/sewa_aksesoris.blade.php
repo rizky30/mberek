@@ -15,21 +15,24 @@
       <!-- Page Heading/Breadcrumbs -->
       <div class="row text-center">
         <div class="col-lg-10 mx-auto">
-          <h2>Pilih Produk</h2>
+          <h2>CEK KETERSEDIAAN PRODUK</h2>
           <br>
         </div>
 
         <form action="{{ url('searchAksesoris') }}" method="GET" class="col-md-5 col-lg-3 col-xl-4 mx-auto">
           <div class="box-tools">
-            <div class="input-group input-group-sm">
-              <input type="text" name="q" class="form-control pull-right validate" placeholder="Search" style="width: 500px">
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              <div class="input-group input-group-sm">
+                <input type="text" name="q" class="form-control pull-right validate" placeholder="Cari Produk Aksesoris" style="width: 500px; height: 40px">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
               </div>
-              <span style="padding-left: 2rem">
-                <a class="btn btn-block btn-lg btn-primary" href="/sewa/aksesoris">Tampilkan Semua</a>
+              <span style="padding-top: 10px" class="col-md-6">
+                <a class="btn btn-block btn-lg btn-success" href="/sewa/aksesoris/tersedia">Tersedia</a>
               </span>
-            </div>
+              <span style="padding-top: 10px" class="col-md-6">
+                <a class="btn btn-block btn-lg btn-danger" href="/sewa/aksesoris/tidak_tersedia">Kosong</a>
+              </span>
           </div>
         </form>
       </div>
@@ -56,8 +59,8 @@
                     <img class="img-responsive zoom-img" src="{{ URL::to('/image/' . $item->gambar) }}"   />
                   </a>
                   <div class="product-bottom text-center">
-                    <h3>{{ $item->jenis }}</h3>
-                    <p>{{ $item->tipe }}</p>
+                    <h3>{{ $item->tipe }}</h3>
+                    <p>{{ $item->jenis }}</p>
                     <h4><span class=" item_price">{{ $item->harga_sewa }}</span></h4>
                   </div>
                 </div>

@@ -29,6 +29,36 @@
           </div>
         </div>
       </div>
+      <div class="box-tools">
+        <a href="/admin/viewAksesoris" class="btn btn-warning" style="float: right; margin-right: 20px">
+          Tampilkan Semua
+        </a>
+      </div>
+      <div class="box-tools">
+        <div class="dropdown" style="float: right; margin-right: 20px">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            Pilih Status
+          </button>
+          <div class="dropdown-menu">
+            <a  href="/admin/viewAksesoris/tersedia">Tersedia</a>
+            <a  href="/admin/viewAksesoris/kosong">Kosong</a>
+          </div>
+        </div>
+      </div>
+      <div class="box-tools">
+        <div class="dropdown" style="float: right; margin-right: 20px">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Pilih Jenis
+          </button>
+          <div class="dropdown-menu">
+            <a  href="/admin/viewAksesoris/tripod">Tripod</a>
+            <a  href="/admin/viewAksesoris/lighting">Lighting</a>
+            <a  href="/admin/viewAksesoris/microphone">Microphone</a>
+            <a  href="/admin/viewAksesoris/battery">Battery</a>
+            <a  href="/admin/viewAksesoris/memory">Memory</a>
+          </div>
+        </div>
+      </div>
     </form>
     
   </div>
@@ -73,9 +103,9 @@
                     {{--   <td>{{$kamera->foto}}</td> --}}
                       <td><img src="{{URL::to('/image/'.$kamera->gambar)}}" alt="" width="140px" height="80px"></td>
 
-                       <td><a href="lihatCamera/{{$kamera->id}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
-                      <td><a href="editCamera/{{$kamera->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                      <td><a href="deleteCamera/{{$kamera->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
+                       <td><a href="/admin/lihatCamera/{{$kamera->id}}" class="btn btn-primary"><i class=" fa fa-eye"></i></a></td>
+                      <td><a href="/admin/editCamera/{{$kamera->id}}" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                      <td><a href="/admin/deleteCamera/{{$kamera->id}}" class="btn btn-danger"><i class=" fa fa-trash"></i></a></td>
                     </tr>
                   </tbody>
                 @endforeach

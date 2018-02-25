@@ -10,7 +10,7 @@
  <div class="content-wrapper">
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Update Camera</h3>
+              <h3 class="box-title">Update Aksesoris</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -22,14 +22,46 @@
 
 
                   <div class="form-group">
-                <label for="merk">jenis</label>
-                <select class="form-control select2" style="width: 100%;" name="jenis" id="jenis">
-                  <option selected="selected" value="tripod">tripod</option>
-                  <option value="lighting">lighting</option>
-                  <option value="microphone">microphone</option>
-                  <option value="extra_battery">extra_battery</option>
-                  <option value="memory">memory</option>
-                </select>
+                    <label for="merk">jenis</label>
+                    <select class="form-control select2" style="width: 100%;" name="jenis" id="jenis">
+                    <?php if ($aksesoris->jenis=='tripod'): ?>
+                        <option value="tripod">{{$aksesoris->jenis}}</option>
+                        <option value="lighting">lighting</option>
+                        <option value="microphone">microphone</option>
+                        <option value="extra_battery">extra_battery</option>
+                        <option value="memory">memory</option>
+
+                    <?php elseif ($aksesoris->jenis=='lighting'): ?>
+                        <option value="tripod">tripod</option>
+                        <option value="lighting">{{$aksesoris->jenis}}</option>
+                        <option value="microphone">microphone</option>
+                        <option value="extra_battery">extra_battery</option>
+                        <option value="memory">memory</option>
+
+                      <?php elseif ($aksesoris->jenis=='microphone'): ?>
+                        <option value="tripod">tripod</option>
+                        <option value="lighting">lighting</option>
+                        <option value="microphone">{{$aksesoris->jenis}}</option>
+                        <option value="extra_battery">extra_battery</option>
+                        <option value="memory">memory</option>
+
+                      <?php elseif ($aksesoris->jenis=='extra_battery'): ?>
+                        <option value="tripod">tripod</option>
+                        <option value="lighting">lighting</option>
+                        <option value="microphone">microphone</option>
+                        <option value="extra_battery">{{$aksesoris->jenis}}</option>
+                        <option value="memory">memory</option>
+
+                      <?php elseif ($aksesoris->jenis=='memory'): ?>
+                        <option value="tripod">tripod</option>
+                        <option value="lighting">lighting</option>
+                        <option value="microphone">microphone</option>
+                        <option value="extra_battery">extra_battery</option>
+                        <option value="memory">{{$aksesoris->jenis}}</option>
+                        
+                    <?php endif ?>
+                    </select>
+                  </div>
 
           <div class="form-group">
                 <label for="tipe">Tipe</label>

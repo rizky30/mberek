@@ -35,38 +35,17 @@
                     <?php if ($lensas->merk=='canon'): ?>
                   <option  value="canon">{{$lensas->merk}}</option>
                   <option value="nikon">nikon</option>
-                  <option value="samsung">samsung</option>
                   <option value="sony">sony</option>
-                  <option value="goPro">goPro</option>
                  
                    <?php elseif ($lensas->merk=='nikon'): ?>
                   <option  value="nikon">{{$lensas->merk}}</option>
                   <option value="canon">canon</option>
-                  <option value="samsung">samsung</option>
                   <option value="sony">sony</option>
-                  <option value="goPro">goPro</option>
-
-                    <?php elseif ($lensas->merk=='samsung'): ?>
-                  <option  value="samsung">{{$lensas->merk}}</option>
-                  <option value="nikon">nikon</option>
-                  <option value="canon">canon</option>
-                  <option value="sony">sony</option>
-                  <option value="goPro">goPro</option>
 
                     <?php elseif ($lensas->merk=='sony'): ?>
                   <option  value="sony">{{$lensas->merk}}</option>
                   <option value="nikon">nikon</option>
-                  <option value="samsung">samsung</option>
                   <option value="canon">canon</option>
-                  <option value="goPro">goPro</option>
-
-                    <?php elseif ($lensas->merk=='goPro'): ?>
-                  <option  value="goPro">{{$lensas->merk}}</option>
-                  <option value="nikon">nikon</option>
-                  <option value="samsung">samsung</option>
-                  <option value="sony">sony</option>
-                  <option value="canon">canon</option>
-
                  <?php endif ?>
                 </select>
               </div>

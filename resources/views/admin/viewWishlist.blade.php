@@ -75,7 +75,7 @@
                                         <th>Request</th>
                                         <th>Deskripsi</th>
                                         <th>Lihat</th>
-                                        <th>Delete</th>
+                                        <th>Hapus</th>
 
                                     </tr>
                                 </thead>

@@ -11,10 +11,6 @@ use Validator; #untuk validator
 use Redirect; #untuk redirect (saat error)
 
 use App\Daftar; # memanggil model
-use App\kamera;
-use App\aksesoris;
-use App\merk;
-use App\jenis;
 
 use DB;
 
@@ -61,74 +57,6 @@ class DaftarController extends Controller
     {
         return view('/admin/insertAdmin');
     }
-
-      public function insertMerk()
-    {
-
-        $kameras = kamera::all();
-        $aksesoris = aksesoris::all();
-        return view('/admin/insertMerk',compact('kameras','aksesoris'));
-    }
-
-       public function storeMerk()
-    {
-
-        // $kameras = kamera::all();
-        // $aksesoris = aksesoris::all();
-        // return view('/admin/insertCategory',compact('kameras','aksesoris'));
-
-
-
-        $merk = new merk;
-       
-        $merk->merk=Input::get("merk");
-    
-      
-
- 
-        $merk->save();
-       
-        return redirect('/admin/insertMerk');
-    }
-      public function insertJenis()
-    {
-
-        $kameras = kamera::all();
-        $aksesoris = aksesoris::all();
-        return view('/admin/insertJenis',compact('kameras','aksesoris'));
-    }
-
-       public function storeJenis()
-    {
-
-        // $kameras = kamera::all();
-        // $aksesoris = aksesoris::all();
-        // return view('/admin/insertCategory',compact('kameras','aksesoris'));
-
-
-
-
-        $jenis = new jenis;
-    
-         $jenis->jenis=Input::get("jenis");
-      
-
- 
-  
-        $jenis->save();
-        return redirect('/admin/insertJenis');
-    }
-
-          public function viewCategory()
-    {
-        //
-         // $kameras = DB::table('tb_kamera')->get();
-       $merk = merk::all();
-       $jenis = jenis::all();
-        return view('admin/viewCategory',compact('merk','jenis'));
-    }
-
-
 
     /**
      * Store a newly created resource in storage.

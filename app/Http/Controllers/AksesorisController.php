@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 
 use App\aksesoris;
-use App\jenis;
 use Illuminate\Http\Request;
 use Input; # untuk inputan
 
@@ -41,8 +40,7 @@ class AksesorisController extends Controller
      public function insertAksesoris()
     {
         //
-        $aks = jenis::all();
-        return view('admin/insertAksesoris',compact('aks'));
+        return view('admin/insertAksesoris');
     }
 
 
@@ -201,7 +199,7 @@ class AksesorisController extends Controller
 
     public function show_battery()
     {
-        $aksesoris = DB::table('aksesoris')->where('jenis', 'battery')->get();
+        $aksesoris = DB::table('aksesoris')->where('jenis', 'extra_battery')->get();
 
         return view('admin/viewAksesoris', ['aksesoris' => $aksesoris]);
     }

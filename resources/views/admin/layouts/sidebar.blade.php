@@ -97,7 +97,7 @@
 
           <li class="treeview">
               <a href="#">
-                  <i class="glyphicon glyphicon-comment"></i> <span>Masukkan</span>
+                  <i class="glyphicon glyphicon-comment"></i> <span>Komentar</span>
                   <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -122,22 +122,7 @@
               <ul class="treeview-menu">
                   <li><a href="/admin/insertAdmin"><i class="fa fa-plus"></i>Insert Admin</a></li>
               </ul>     
-          
             
-       <li class="treeview">
-          <a href="#">
-            <i class="fa fa-check-square-o"></i> <span>Category Field</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-         
-           <li><a href="/admin/insertMerk"><i class="fa fa-plus-square"></i>Tambah Merk</a></li>
-             <li><a href="/admin/insertJenis"><i class="fa fa-plus-square"></i>Tambah Jenis</a></li>
-          </ul>
-        </li>
-
               @endif
           </li>          
 

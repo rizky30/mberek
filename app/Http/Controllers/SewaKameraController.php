@@ -50,6 +50,20 @@ class SewaKameraController extends Controller
         return view('layouts/sewa_kamera', ['kameras' => $kameras]);
     }
 
+    public function show_tersedia()
+    {
+        $kameras = DB::table('kameras')->where('status', 'tersedia')->get();
+
+        return view('layouts/sewa_kamera', ['kameras' => $kameras]);
+    }
+
+    public function show_tidaktersedia()
+    {
+        $kameras = DB::table('kameras')->where('status', 'kosong')->get();
+
+        return view('layouts/sewa_kamera', ['kameras' => $kameras]);
+    }
+
     public function detil_kamera($id_kamera)
     {
         $kameras = DB::table('kameras')->where('id_kamera', $id_kamera)->first();
